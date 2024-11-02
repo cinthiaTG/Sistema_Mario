@@ -12,7 +12,7 @@
     <!-- Barra superior -->
     <header class="bg-dark text-white py-2">
         <div class="container d-flex justify-content-end align-items-center">
-            <a class="navbar-brand" href="{{route('index')}}">SPORTIVO</a>
+            <a class="navbar-brand" href="{{route('aficionado.index')}}">SPORTIVO</a>
 
             <input type="text" class="form-control me-3 w-auto" placeholder="Buscar..." aria-label="Buscar">
             <a href="#" class="text-white me-3">Clasificación</a>
@@ -31,7 +31,6 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item"><a class="nav-link" href="{{ route('aficionado.index') }}">Noticias</a></li>
-                    <li class="nav-item"><a class="nav-link" href="{{ route('jugadores.index') }}">Jugadores</a></li>
                     <li class="nav-item"><a class="nav-link" href="#">En Vivo</a></li>
                     <li class="nav-item"><a class="nav-link" href="#">Rankings</a></li>
                     <li class="nav-item"><a class="nav-link" href="#">Favoritos</a></li>

@@ -24,6 +24,9 @@
             Route::group(['prefix' => 'modulos/Fanatico'], function() {
                 Route::get('/', [FanController::class, 'index'])->name('aficionado.index');
             });
+            Route::group(['prefix' => 'modulos/vistas'], function() {
+                Route::get('/', [FanController::class, 'index'])->name('vistas.enVivo');
+            });
 
 
 
