@@ -7,6 +7,12 @@
 <section class="content">
     <h2>Hola @Nombre del usuario</h2>
     <h3>Ultimas Noticias</h3>
+    
+    <div>
+        <img src="{{ asset('img/noticia.png') }}" alt="Imagen noticia">
+
+    </div>
+    <h3>Resultados de Partidos</h3>
     <div class="news-card">
         <div class="team">
             <img src="{{ asset('img/equip1.png') }}" alt="Equipo 1">
@@ -20,11 +26,6 @@
             <p>Equipo 2</p>
         </div>
     </div>
-    <div>
-        <img src="{{ asset('img/noticia.png') }}" alt="Imagen noticia">
-
-    </div>
-    <h3>Resultados de Partidos</h3>
     <div class="match-card">
         <div class="team">
             <img src="{{ asset('img/equip1.png') }}" alt=" Equipo 1">

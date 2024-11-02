@@ -1,4 +1,3 @@
-<!-- resources/views/layouts/base.blade.php -->
 
 <!DOCTYPE html>
 <html lang="es">
@@ -13,6 +12,8 @@
     <!-- Barra superior -->
     <header class="bg-dark text-white py-2">
         <div class="container d-flex justify-content-end align-items-center">
+            <a class="navbar-brand" href="{{route('index')}}">SPORTIVO</a>
+
             <input type="text" class="form-control me-3 w-auto" placeholder="Buscar..." aria-label="Buscar">
             <a href="#" class="text-white me-3">Clasificación</a>
             <a href="#" class="text-white me-3">Notificaciones</a>
@@ -23,7 +24,6 @@
     <!-- Menú de navegación principal -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
         <div class="container">
-            <a class="navbar-brand" href="#">SPORTIVO</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
