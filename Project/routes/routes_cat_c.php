@@ -15,7 +15,7 @@
         use App\Http\Controllers\JugadorController;
         
         Route::group(['namespace' => 'App\Http\Controllers'], function() {
-            Route::group(['prefix' => 'modulos/perfil'], function() {
+            Route::group(['prefix' => 'modulos/jugador'], function() {
                 Route::get('/', [JugadorController::class, 'index'])->name('jugadores.index');
             });
         });
