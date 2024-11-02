@@ -152,15 +152,29 @@ body {
         </div>
 
         <div class="form-container">
-            <div class="input-label email-label">Correo Electrónico</div>
-            <div class="input-box email-box"></div>
+                <!-- Campo de correo electrónico -->
+                <div class="form-group">
+                    <label for="email" class="input-label email-label">Correo Electrónico</label>
+                    <input type="email" id="email" name="email" class="input-box email-box" required>
+                </div>
+        
+                <!-- Campo de contraseña -->
+                <div class="form-group">
+                    <label for="password" class="input-label password-label">Contraseña</label>
+                    <input type="password" id="password" name="password" class="input-box password-box" required>
+                </div>
+        
+                <!-- Casilla de verificación "Recordar" -->
+                <div class="form-group remember-label">
+                    <input type="checkbox" id="remember" name="remember" class="checkbox">
+                    <label for="remember">Recordar</label>
+                </div>
+        
+                <!-- Botón de inicio de sesión -->
+                <a href="{{ route('aficionado.index') }}" class="btn btn-primary btn-block login-button">Log in</a>
 
-            <div class="input-label password-label">Contraseña</div>
-            <div class="input-box password-box"></div>
-            <div class="remember-label">
-            <div class="checkbox"></div>Recordar</div>
-            <div class="login-button">Log in</div>
         </div>
+        
     </div>
 </body>
 </html>

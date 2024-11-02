@@ -5,8 +5,8 @@ use Illuminate\Support\Facades\Route;
 
 Route::group(['namespace' => 'App\Http\Controllers'], function() {
    
-    Route::group(['prefix' => 'modulos/login'], function() {
-        Route::get('/', [LoginController::class, 'index'])->name('login.index');
-    });
+    /*Route::group(['prefix' => 'modulos/login'], function() {
+        Route::get('/', [LoginController::class, 'index'])->name('index');
+    });*/
 
 });
