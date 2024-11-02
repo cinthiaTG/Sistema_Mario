@@ -13,9 +13,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('index');
-});
+Route::get('/', function () {return view('index');})->name('index');
 
-//include(base_path('resources/routes/routes_cat_s.php'));
+include(base_path('routes/routes_cat_s.php'));
 include(base_path('routes/routes_cat_c.php'));
