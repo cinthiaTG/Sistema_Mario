@@ -13,10 +13,19 @@
 
         use Illuminate\Support\Facades\Route;
         use App\Http\Controllers\JugadorController;
+        use App\Http\Controllers\FanController;
         
         Route::group(['namespace' => 'App\Http\Controllers'], function() {
+
             Route::group(['prefix' => 'modulos/jugador'], function() {
                 Route::get('/', [JugadorController::class, 'index'])->name('jugadores.index');
             });
+
+            Route::group(['prefix' => 'modulos/Fanatico'], function() {
+                Route::get('/', [FanController::class, 'index'])->name('aficionado.index');
+            });
+
+
+
         });
         

@@ -29,7 +29,7 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="#">Noticias</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{{ route('aficionado.index') }}">Noticias</a></li>
                     <li class="nav-item"><a class="nav-link" href="{{ route('jugadores.index') }}">Jugadores</a></li>
                     <li class="nav-item"><a class="nav-link" href="#">En Vivo</a></li>
                     <li class="nav-item"><a class="nav-link" href="#">Rankings</a></li>
