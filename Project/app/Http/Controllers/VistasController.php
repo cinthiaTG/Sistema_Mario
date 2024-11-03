@@ -7,9 +7,9 @@ use App\Models\User;
 
 
 class VistasController extends Controller{
-    public function index()
+    public function noticias()
         {
-            return view("modulos.aficionado.index");
+            return view("modulos.vistas.noticias");
         }
 
         public function enVivo()
