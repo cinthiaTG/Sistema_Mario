@@ -5,13 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Laravel 11 | Posts</title>
-    <link rel="stylesheet" href="{{ asset('css/login.css') }}">    
+    <link rel="stylesheet" href="{{ asset('css/login.css') }}"> 
 </head>
 <body>
     <div class="container">
         <div class="header">
             <div class="logo-text">SPORTIVO</div>
-            <img class="logo-image" src="images/logo.png" alt="Logo"/>
+            <img class="logo-image" src="{{ asset('img/logo.png') }}" alt="logo">
         </div>
         
         <div class="main-text">Gestiona tu pasión, lidera tu equipo</div>
@@ -20,15 +20,19 @@
         </div>
 
         <div class="form-container">
-            <div class="input-label email-label">Correo Electrónico</div>
-            <div class="input-box email-box"></div>
+            <label class="input-label email-label" for="email">Correo Electrónico</label>
+            <input type="email" id="email" class="input-box email-box">
 
-            <div class="input-label password-label">Contraseña</div>
-            <div class="input-box password-box"></div>
+            <label class="input-label password-label" for="password">Contraseña</label>
+            <input type="password" id="password" class="input-box password-box">
+            
             <div class="remember-label">
-            <div class="checkbox"></div>Recordar</div>
+                <input type="checkbox" class="checkbox">Recordar
+            </div>
+            
             <div class="login-button">Log in</div>
         </div>
     </div>
 </body>
 </html>
+

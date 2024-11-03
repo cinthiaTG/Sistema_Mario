@@ -3,17 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Interfaz de Usuario</title>
+    <title>Interfaz de Daministrador</title>
     <link rel="stylesheet" href="{{ asset('css/dashboard.css') }}"> 
 </head>
 <body>
     <div class="container">
         <div class="sidebar"></div>
         
-        <img class="icon1" src="images/more.png" />
-        <img class="icon2" src="images/cup.png" />
-        <img class="icon3" src="images/player.png" />
-        <img class="icon4" src="images/search.png" />
+        <img class="icon1" src="{{ asset('img/more.png') }}" alt="more">
+        <img class="icon2" src="{{ asset('img/cup.png') }}" alt="cup">
+        <img class="icon3" src="{{ asset('img/player.png') }}" alt="player">
+        <img class="icon4" src="{{ asset('img/search.png') }}" alt="search">
         
         <div class="welcome-message">
             <span>Hola </span><span class="username">@Nombre del usuario</span>
