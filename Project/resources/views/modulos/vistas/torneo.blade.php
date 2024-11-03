@@ -15,7 +15,7 @@
                 <div class="team-info">
                     <p>Liga MX</p>
                     <div class="links">
-                        <p class="link"><a href="#">Equipo</a></p>
+                        <p class="link"><a href="{{ route('vistas.equipo') }}">Equipo</a></p>
                         <p class="link">|</p>
                         <p class="link"><a href="#">Estadísticas</a></p>
                     </div>

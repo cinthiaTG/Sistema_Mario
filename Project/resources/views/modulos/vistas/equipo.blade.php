@@ -5,17 +5,17 @@
 @section('content')
 <section class="content">
     <h2>Hola @Nombre del usuario</h2>
-    <h3 class="title">Ligas de Futbol y Torneos</h3>
+    <h3 class="title">Equipos | Liga MX</h3>
     
-    <h3>Lo Mejor</h3>
+    <br>
     <div class="match-card">
         <div class="team-card">
             <div class="team">
                 <img src="{{ asset('img/equip1.png') }}" alt="Equipo 1">
                 <div class="team-info">
-                    <p>Liga MX</p>
+                    <p>América</p>
                     <div class="links">
-                        <p class="link"><a href="#">Equipo</a></p>
+                        <p class="link"><a href="#">Calendario</a></p>
                         <p class="link">|</p>
                         <p class="link"><a href="#">Estadísticas</a></p>
                     </div>
@@ -27,7 +27,7 @@
             <div class="team">
                 <img src="{{ asset('img/equip1.png') }}" alt="Equipo 1">
                 <div class="team-info">
-                    <p>UEFA Champions League</p>
+                    <p>Necaxa</p>
                     <div class="links">
                         <p class="link"><a href="#">Equipo</a></p>
                         <p class="link">|</p>
@@ -43,9 +43,9 @@
             <div class="team">
                 <img src="{{ asset('img/equip1.png') }}" alt="Equipo 1">
                 <div class="team-info">
-                    <p>Liga MX</p>
+                    <p>Atlas</p>
                     <div class="links">
-                        <p class="link"><a href="#">Equipo</a></p>
+                        <p class="link"><a href="#">Calendario</a></p>
                         <p class="link">|</p>
                         <p class="link"><a href="#">Estadísticas</a></p>
                     </div>
@@ -57,9 +57,9 @@
             <div class="team">
                 <img src="{{ asset('img/equip1.png') }}" alt="Equipo 1">
                 <div class="team-info">
-                    <p>UEFA Champions League</p>
+                    <p>Pachuca</p>
                     <div class="links">
-                        <p class="link"><a href="#">Equipo</a></p>
+                        <p class="link"><a href="#">Calendario</a></p>
                         <p class="link">|</p>
                         <p class="link"><a href="#">Estadísticas</a></p>
                     </div>
@@ -73,9 +73,9 @@
             <div class="team">
                 <img src="{{ asset('img/equip1.png') }}" alt="Equipo 1">
                 <div class="team-info">
-                    <p>Liga MX</p>
+                    <p>Atlético de San Luis</p>
                     <div class="links">
-                        <p class="link"><a href="#">Equipo</a></p>
+                        <p class="link"><a href="#">Calendario</a></p>
                         <p class="link">|</p>
                         <p class="link"><a href="#">Estadísticas</a></p>
                     </div>
@@ -87,9 +87,9 @@
             <div class="team">
                 <img src="{{ asset('img/equip1.png') }}" alt="Equipo 1">
                 <div class="team-info">
-                    <p>UEFA Champions League</p>
+                    <p>Puebla</p>
                     <div class="links">
-                        <p class="link"><a href="#">Equipo</a></p>
+                        <p class="link"><a href="#">Calendario</a></p>
                         <p class="link">|</p>
                         <p class="link"><a href="#">Estadísticas</a></p>
                     </div>
@@ -103,9 +103,9 @@
             <div class="team">
                 <img src="{{ asset('img/equip1.png') }}" alt="Equipo 1">
                 <div class="team-info">
-                    <p>Liga MX</p>
+                    <p>Cruz Azul</p>
                     <div class="links">
-                        <p class="link"><a href="#">Equipo</a></p>
+                        <p class="link"><a href="#">Calendario</a></p>
                         <p class="link">|</p>
                         <p class="link"><a href="#">Estadísticas</a></p>
                     </div>
@@ -117,40 +117,9 @@
             <div class="team">
                 <img src="{{ asset('img/equip1.png') }}" alt="Equipo 1">
                 <div class="team-info">
-                    <p>UEFA Champions League</p>
+                    <p>Pumas UNAM</p>
                     <div class="links">
-                        <p class="link"><a href="#">Equipo</a></p>
-                        <p class="link">|</p>
-                        <p class="link"><a href="#">Estadísticas</a></p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <h3>México y CONCACAF</h3>
-    <div class="match-card">
-        <div class="team-card">
-            <div class="team">
-                <img src="{{ asset('img/equip1.png') }}" alt="Equipo 1">
-                <div class="team-info">
-                    <p>Equipo 1</p>
-                    <div class="links">
-                        <p class="link"><a href="#">Equipo</a></p>
-                        <p class="link">|</p>
-                        <p class="link"><a href="#">Estadísticas</a></p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="separator"></div>
-        <div class="team-card">
-            <div class="team">
-                <img src="{{ asset('img/equip1.png') }}" alt="Equipo 1">
-                <div class="team-info">
-                    <p>Equipo 1</p>
-                    <div class="links">
-                        <p class="link"><a href="#">Equipo</a></p>
+                        <p class="link"><a href="#">Calendario</a></p>
                         <p class="link">|</p>
                         <p class="link"><a href="#">Estadísticas</a></p>
                     </div>
@@ -164,9 +133,9 @@
             <div class="team">
                 <img src="{{ asset('img/equip1.png') }}" alt="Equipo 1">
                 <div class="team-info">
-                    <p>Liga MX</p>
+                    <p>FC Juarez</p>
                     <div class="links">
-                        <p class="link"><a href="#">Equipo</a></p>
+                        <p class="link"><a href="#">Calendario</a></p>
                         <p class="link">|</p>
                         <p class="link"><a href="#">Estadísticas</a></p>
                     </div>
@@ -178,9 +147,9 @@
             <div class="team">
                 <img src="{{ asset('img/equip1.png') }}" alt="Equipo 1">
                 <div class="team-info">
-                    <p>UEFA Champions League</p>
+                    <p>Querétaro</p>
                     <div class="links">
-                        <p class="link"><a href="#">Equipo</a></p>
+                        <p class="link"><a href="#">Calendario</a></p>
                         <p class="link">|</p>
                         <p class="link"><a href="#">Estadísticas</a></p>
                     </div>
@@ -194,9 +163,9 @@
             <div class="team">
                 <img src="{{ asset('img/equip1.png') }}" alt="Equipo 1">
                 <div class="team-info">
-                    <p>Liga MX</p>
+                    <p>Guadalajara</p>
                     <div class="links">
-                        <p class="link"><a href="#">Equipo</a></p>
+                        <p class="link"><a href="#">Calendario</a></p>
                         <p class="link">|</p>
                         <p class="link"><a href="#">Estadísticas</a></p>
                     </div>
@@ -208,9 +177,9 @@
             <div class="team">
                 <img src="{{ asset('img/equip1.png') }}" alt="Equipo 1">
                 <div class="team-info">
-                    <p>UEFA Champions League</p>
+                    <p>Santos</p>
                     <div class="links">
-                        <p class="link"><a href="#">Equipo</a></p>
+                        <p class="link"><a href="#">Calendario</a></p>
                         <p class="link">|</p>
                         <p class="link"><a href="#">Estadísticas</a></p>
                     </div>
@@ -218,6 +187,97 @@
             </div>
         </div>
     </div>
+
+    <div class="match-card">
+        <div class="team-card">
+            <div class="team">
+                <img src="{{ asset('img/equip1.png') }}" alt="Equipo 1">
+                <div class="team-info">
+                    <p>León</p>
+                    <div class="links">
+                        <p class="link"><a href="#">Calendario</a></p>
+                        <p class="link">|</p>
+                        <p class="link"><a href="#">Estadísticas</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="separator"></div>
+        <div class="team-card">
+            <div class="team">
+                <img src="{{ asset('img/equip1.png') }}" alt="Equipo 1">
+                <div class="team-info">
+                    <p>Tigres UANL</p>
+                    <div class="links">
+                        <p class="link"><a href="#">Calendario</a></p>
+                        <p class="link">|</p>
+                        <p class="link"><a href="#">Estadísticas</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="match-card">
+        <div class="team-card">
+            <div class="team">
+                <img src="{{ asset('img/equip1.png') }}" alt="Equipo 1">
+                <div class="team-info">
+                    <p>Mazatlán FC</p>
+                    <div class="links">
+                        <p class="link"><a href="#">Calendario</a></p>
+                        <p class="link">|</p>
+                        <p class="link"><a href="#">Estadísticas</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="separator"></div>
+        <div class="team-card">
+            <div class="team">
+                <img src="{{ asset('img/equip1.png') }}" alt="Equipo 1">
+                <div class="team-info">
+                    <p>Tijuana</p>
+                    <div class="links">
+                        <p class="link"><a href="#">Calendario</a></p>
+                        <p class="link">|</p>
+                        <p class="link"><a href="#">Estadísticas</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="match-card">
+        <div class="team-card">
+            <div class="team">
+                <img src="{{ asset('img/equip1.png') }}" alt="Equipo 1">
+                <div class="team-info">
+                    <p>Monterrey</p>
+                    <div class="links">
+                        <p class="link"><a href="#">Calendario</a></p>
+                        <p class="link">|</p>
+                        <p class="link"><a href="#">Estadísticas</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="separator"></div>
+        <div class="team-card">
+            <div class="team">
+                <img src="{{ asset('img/equip1.png') }}" alt="Equipo 1">
+                <div class="team-info">
+                    <p>Toluca</p>
+                    <div class="links">
+                        <p class="link"><a href="#">Calendario</a></p>
+                        <p class="link">|</p>
+                        <p class="link"><a href="#">Estadísticas</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
 </section>
 </div>
 </main>
