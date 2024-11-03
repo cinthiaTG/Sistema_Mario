@@ -26,7 +26,7 @@
             <a href="{{ route('creartorneo.index')}}" class="card">
                 <div class="card-label">Crear Torneo</div>
             </a>
-            <a href="registrar_equipo.html" class="card">
+            <a href="{{ route('registrarjugador.index')}}" class="card">
                 <div class="card-label">Registrar Equipo</div>
             </a>
             <a href="consulta_historial.html" class="card">

@@ -1,0 +1,136 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f3f3f3;
+}
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 150px;
+    height: 100vh;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 20px;
+}
+
+.icon1 {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    left: 41px;
+    top: 62px;
+}
+    
+.icon2 {
+    width: 38px;
+    height: 44px;
+    position: absolute;
+    left: 47px;
+    top: 150px;
+}
+
+.icon3,
+.icon4 {
+  position: absolute;
+}
+
+.icon3 {
+  width: 55px;
+  height: 53px;
+  left: 36px;
+  top: 230px;
+}
+
+.icon4 {
+    width: 55px;
+    height: 53px;
+    left: 40px;
+    top: 730px;
+}
+
+.container {
+    margin-left: 100px;
+    width: 500px;
+    background-color: #f7f0f0;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.form-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.player-form label {
+    font-weight: bold;
+    font-size: 14px;
+    margin-bottom: 5px;
+    display: block;
+    color: #333;
+}
+
+.player-form input[type="text"],
+.player-form input[type="number"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.section-title {
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    color: #444;
+}
+
+.save-button {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
+    background-color: #333;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+    text-transform: uppercase;
+}
+
+.save-button:hover {
+    background-color: #555;
+}
+
+.circle-wrapper {
+    width: 55px;
+    height: 53px;
+    left: 36px;
+    position: fixed;
+    left: 30px;
+    top: 820px;
+}
+    
+.circle {
+    width: 81px;
+    height: 83px;
+    background: #53AA51;
+    border-radius: 50%;
+}
