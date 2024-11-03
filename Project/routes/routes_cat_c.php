@@ -13,8 +13,8 @@
 
         use Illuminate\Support\Facades\Route;
         use App\Http\Controllers\JugadorController;
-        use App\Http\Controllers\FanController;
-        
+        use App\Http\Controllers\VistasController;
+
         Route::group(['namespace' => 'App\Http\Controllers'], function() {
 
             Route::group(['prefix' => 'modulos/jugador'], function() {
@@ -22,7 +22,14 @@
             });
 
             Route::group(['prefix' => 'modulos/Fanatico'], function() {
-                Route::get('/', [FanController::class, 'index'])->name('aficionado.index');
+                //vista perfil
+                //crear perfil
+                //update perfil
+                //opciones de fanatico
+            });
+            Route::group(['prefix' => 'modulos/vistas'], function() {
+                Route::get('/enVivo', [VistasController::class, 'enVivo'])->name('vistas.enVivo');
+                Route::get('/noticias', [VistasController::class, 'noticias'])->name('vistas.noticias');
             });
 
 
