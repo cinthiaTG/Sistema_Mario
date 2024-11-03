@@ -171,7 +171,8 @@ body {
                 </div>
         
                 <!-- Botón de inicio de sesión -->
-                <a href="{{ route('vistas.noticias') }}" class="btn btn-primary btn-block login-button">Log in</a>
+                <a href="{{ route('vistas.noticias') }}" class="btn btn-primary btn-block login-button">Log in Aficionados</a>
+                <a href="{{ route('dashboard.index') }}" class="btn btn-primary btn-block login-button">Log in Entrenadores</a>
 
         </div>
         

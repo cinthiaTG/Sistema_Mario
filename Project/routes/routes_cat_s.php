@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\CrearTorneoController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\SignupController;
@@ -18,6 +19,8 @@ Route::group(['namespace' => 'App\Http\Controllers'], function() {
     Route::group(['prefix' => 'modulos/signup'], function(){
         Route::get('/', [SignupController::class, 'index'])->name('signup.index');
     });
-   
+    Route::group(['prefix' => 'modulos/creartorneo'], function(){
+        Route::get('/', [CrearTorneoController::class, 'index'])->name('creartorneo.index');
+    });
 
 });

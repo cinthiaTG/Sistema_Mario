@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Interfaz de Daministrador</title>
+    <title>Interfaz de Administrador</title>
     <link rel="stylesheet" href="{{ asset('css/dashboard.css') }}"> 
 </head>
 <body>
@@ -14,25 +14,30 @@
         <img class="icon2" src="{{ asset('img/cup.png') }}" alt="cup">
         <img class="icon3" src="{{ asset('img/player.png') }}" alt="player">
         <img class="icon4" src="{{ asset('img/search.png') }}" alt="search">
+    </div>
         
+    <div class="content">
         <div class="welcome-message">
             <span>Hola </span><span class="username">@Nombre del usuario</span>
         </div>
-        
         <div class="sub-message">¿Qué buscas hacer hoy?</div>
         
         <div class="card-container">
-            <div class="card"></div>
-            <div class="card"></div>
-            <div class="card"></div>
-            <div class="card-label">Crear Torneo</div>
-            <div class="card-label">Registrar Equipo</div>
+            <a href="{{ route('creartorneo.index')}}" class="card">
+                <div class="card-label">Crear Torneo</div>
+            </a>
+            <a href="registrar_equipo.html" class="card">
+                <div class="card-label">Registrar Equipo</div>
+            </a>
+            <a href="consulta_historial.html" class="card">
+                <div class="card-label">Consulta Historial</div>
+            </a>
         </div>
         
-        <div class="register-player">Registrar Jugador</div>
+
         
         <div class="card-wrapper">
-            <div class="card"></div>
+            <div class="card"></div> 
         </div>
         
         <div class="history-label">Consultar Historial<br>de Torneos</div>
@@ -51,9 +56,8 @@
         
         <div class="circle-wrapper">
             <div class="circle"></div>
-            
         </div>
-   
     </div>
+</div>
 </body>
 </html>
