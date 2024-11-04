@@ -96,7 +96,7 @@
 <body>
     <div class="container">
         <div class="sidebar">
-            <a href="{{ route('jugadores.index') }}"> 
+            <a href="{{ route('dashboard.index') }}"> 
                 <img class="icon0" src="{{ asset('img/iB.png') }}" alt="more">
             </a>            
             <img class="icon1" src="{{ asset('img/more.png') }}" alt="more">
