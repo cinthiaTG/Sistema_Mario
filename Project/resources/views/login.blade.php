@@ -143,7 +143,7 @@ body {
     <div class="container">
         <div class="header">
             <div class="logo-text">SPORTIVO</div>
-            <img class="logo-image" src="images/logo.png" alt="Logo"/>
+            <img class="logo-image" src="{{ asset('img/logo.png') }}" alt="logo">
         </div>
         
         <div class="main-text">Gestiona tu pasión, lidera tu equipo</div>
