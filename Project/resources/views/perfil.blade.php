@@ -106,8 +106,7 @@
         </div>
         <div class="profile-content">
             <h2>Perfil Usuario</h2>
-            <img class="profile-picture" src="{{ asset('img/logo.png') }}" alt="Foto de Perfil">
-            <div class="logo">SPORTIVO</div>
+            <img class="profile-picture" src="{{ asset('img/profile.png') }}" alt="Foto de Perfil">
             <ul class="profile-details">
                 <li>Nombre:</li>
                 <li>Fecha de nacimiento:</li>
