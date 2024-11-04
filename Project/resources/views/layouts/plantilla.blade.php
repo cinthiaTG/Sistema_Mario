@@ -33,7 +33,7 @@
                     <li class="nav-item"><a class="nav-link" href="#">Favoritos</a></li>
                     <li class="nav-item"><a class="nav-link" href="#">Calendario</a></li>
                     <li class="nav-item"><a class="nav-link" href="#">Estadísticas</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Torneos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{{ route('vistas.torneo') }}">Torneos</a></li>
                     <li class="nav-item"><a class="nav-link" href="#">Más</a></li>
                 </ul>
             </div>

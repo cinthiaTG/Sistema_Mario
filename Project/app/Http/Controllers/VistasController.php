@@ -16,4 +16,15 @@ class VistasController extends Controller{
         {
             return view("modulos.vistas.enVivo");
         }
+
+        public function torneo()
+        {
+            return view("modulos.vistas.torneo");
+        }
+
+        public function equipo()
+        {
+            return view("modulos.vistas.equipo");
+        }
+
 }

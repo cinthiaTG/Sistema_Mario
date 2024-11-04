@@ -30,6 +30,8 @@
             Route::group(['prefix' => 'modulos/vistas'], function() {
                 Route::get('/enVivo', [VistasController::class, 'enVivo'])->name('vistas.enVivo');
                 Route::get('/noticias', [VistasController::class, 'noticias'])->name('vistas.noticias');
+                Route::get('/torneo', [VistasController::class, 'torneo'])->name('vistas.torneo');
+                Route::get('/equipo', [VistasController::class, 'equipo'])->name('vistas.equipo');
             });
 
 
