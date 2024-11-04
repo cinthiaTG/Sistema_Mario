@@ -8,12 +8,16 @@
 </head>
 <body>
     <div class="container">
-        <div class="sidebar"></div>
-        
-        <img class="icon1" src="{{ asset('img/more.png') }}" alt="more">
-        <img class="icon2" src="{{ asset('img/cup.png') }}" alt="cup">
-        <img class="icon3" src="{{ asset('img/player.png') }}" alt="player">
-        <img class="icon4" src="{{ asset('img/search.png') }}" alt="search">
+        <div class="sidebar">
+            <a href="{{ route('dashboard.index') }}"> 
+                <img class="icon0" src="{{ asset('img/iB.png') }}" alt="more">
+            </a>            
+            <img class="icon1" src="{{ asset('img/more.png') }}" alt="more">
+            <img class="icon2" src="{{ asset('img/cup.png') }}" alt="cup">
+            <img class="icon3" src="{{ asset('img/player.png') }}" alt="player">
+            <img class="icon4" src="{{ asset('img/search.png') }}" alt="search">
+        </div>
+
         <div class="form-title">Crear Torneo</div>
         <form class="tournament-form">
             <label>Subir Logotipo</label>
@@ -68,7 +72,6 @@
 
         <div class="circle-wrapper">
             <div class="circle"></div>
-            
         </div>
     </div>
 </body>

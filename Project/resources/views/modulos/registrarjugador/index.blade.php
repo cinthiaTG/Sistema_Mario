@@ -8,6 +8,9 @@
 </head>
 <body>
     <div class="sidebar">
+        <a href="{{ route('dashboard.index') }}"> 
+            <img class="icon0" src="{{ asset('img/iB.png') }}" alt="more">
+        </a>
         <img class="icon1" src="{{ asset('img/more.png') }}" alt="more">
         <img class="icon2" src="{{ asset('img/cup.png') }}" alt="cup">
         <img class="icon3" src="{{ asset('img/player.png') }}" alt="player">
