@@ -15,6 +15,8 @@
         use App\Http\Controllers\JugadorController;
         use App\Http\Controllers\VistasController;
 
+        use App\Http\Controllers\VistasController;
+
         Route::group(['namespace' => 'App\Http\Controllers'], function() {
 
             Route::group(['prefix' => 'modulos/jugador'], function() {

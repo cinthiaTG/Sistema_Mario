@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\LoginController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LoginController;
 
@@ -17,5 +18,6 @@ use App\Http\Controllers\LoginController;
 
 Route::get('/', [LoginController::class, 'login'])->name('login');
 
+include(base_path('routes/routes_cat_s.php'));
 include(base_path('routes/routes_cat_s.php'));
 include(base_path('routes/routes_cat_c.php'));
