@@ -3,6 +3,7 @@
 use App\Http\Controllers\CrearTorneoController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\LoginController;
+use App\Http\Controllers\PerfilController;
 use App\Http\Controllers\RegistrarJugadorController;
 use App\Http\Controllers\SignupController;
 use Illuminate\Support\Facades\Route;
@@ -25,5 +26,9 @@ Route::group(['namespace' => 'App\Http\Controllers'], function() {
     });
     Route::group(['prefix' => 'modulos/registarjugador'], function(){
         Route::get('/', [RegistrarJugadorController::class, 'index'])->name('registrarjugador.index');
+    });
+
+    Route::group(['prefix' => 'views/perfil'], function(){
+        Route::get('/', [PerfilController::class, 'perfil'])->name('views.perfil');
     });
 });

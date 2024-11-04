@@ -55,7 +55,7 @@
         <div class="team-stats">Consultar <br>Estadísticas de<br>Equipos</div>
         
         <div class="circle-wrapper">
-            <div class="circle"></div>
+            <a href="{{ asset('view.perfil') }}"><div class="circle"></div></a>
         </div>
     </div>
 </div>

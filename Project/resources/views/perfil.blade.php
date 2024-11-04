@@ -6,53 +6,61 @@
     <title>Perfil Usuario</title>
     <style>
         * {
-            box-sizing: border-box;
             margin: 0;
             padding: 0;
+            box-sizing: border-box;
         }
+        
         body {
             font-family: Arial, sans-serif;
-            background-color: #333;
+            background-color: black;
             display: flex;
             justify-content: center;
             align-items: center;
             height: 100vh;
             margin: 0;
         }
+
         .container {
             display: flex;
-            width: 900px;
+            width: 100vw;
+            height: 100vh;
             background-color: #fff;
             border-radius: 10px;
             overflow: hidden;
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
         }
+
         .sidebar {
-            width: 70px;
-            background-color: #111;
+            width: 80px;
+            background-color: black;
             display: flex;
             flex-direction: column;
             align-items: center;
             padding: 20px 0;
         }
+
         .sidebar img {
             width: 30px;
             height: 30px;
             margin: 20px 0;
             cursor: pointer;
         }
+
         .profile-content {
             flex: 1;
             padding: 40px;
             background-color: #f9f3f4;
             border-radius: 0 10px 10px 0;
-            position: relative;
+            overflow-y: auto;
         }
+
         .profile-content h2 {
             text-align: center;
             margin-bottom: 30px;
             font-size: 26px;
         }
+
         .profile-picture {
             display: block;
             margin: 0 auto;
@@ -61,6 +69,7 @@
             height: 120px;
             object-fit: cover;
         }
+
         .logo {
             text-align: center;
             font-size: 20px;
@@ -69,16 +78,19 @@
             margin-top: 10px;
             margin-bottom: 30px;
         }
+
         .profile-details {
             list-style-type: none;
             padding: 0;
             margin-top: 20px;
         }
+
         .profile-details li {
             font-size: 16px;
             margin-bottom: 12px;
             font-weight: bold;
         }
+    </style>
     </style>
 </head>
 <body>
@@ -97,13 +109,13 @@
             <img class="profile-picture" src="{{ asset('img/logo.png') }}" alt="Foto de Perfil">
             <div class="logo">SPORTIVO</div>
             <ul class="profile-details">
-                <li>Nombre</li>
-                <li>Fecha de nacimiento</li>
-                <li>Género</li>
-                <li>Teléfono</li>
-                <li>Edad</li>
-                <li>Correo electrónico</li>
-                <li>Rol (jugador, entrenador, árbitro, fanático)</li>
+                <li>Nombre:</li>
+                <li>Fecha de nacimiento:</li>
+                <li>Género:</li>
+                <li>Teléfono:</li>
+                <li>Edad:</li>
+                <li>Correo electrónico:</li>
+                <li>Rol (jugador, entrenador, árbitro, fanático):</li>
             </ul>
         </div>
     </div>
