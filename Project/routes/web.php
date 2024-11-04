@@ -15,6 +15,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', [LoginController::class, 'login'])->name('login');
+Route::get('/singup', [LoginController::class, 'singup'])->name('singup');
 
 
 include(base_path('routes/routes_cat_s.php'));

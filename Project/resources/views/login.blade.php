@@ -147,8 +147,10 @@ body {
         </div>
         
         <div class="main-text">Gestiona tu pasión, lidera tu equipo</div>
+
         <div class="sub-text">
-            <span>No tienes una cuenta? </span><span class="register-link">Registrate ahora</span>
+            <span>No tienes una cuenta? </span>
+        <a class="otro" href="{{ route('singup') }}" class="btn btn-primary btn-block login-button">Registrate ahora</a>
         </div>
 
         <div class="form-container">
