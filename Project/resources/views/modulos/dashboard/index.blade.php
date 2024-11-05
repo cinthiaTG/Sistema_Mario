@@ -24,17 +24,16 @@
         
         <div class="card-container">
             <a href="{{ route('creartorneo.index')}}" class="card">
-                <div class="card-label">Crear Torneo</div>
+                <div class="card-label0">Crear Torneo</div>
+            </a>
+            <a href="{{ route('registrarequipo.index')}}" class="card">
+                <div class="card-label1">Registrar Equipo</div>
             </a>
             <a href="{{ route('registrarjugador.index')}}" class="card">
-                <div class="card-label">Registrar Equipo</div>
+                <div class="card-label2">Registrar Jugador</div>
             </a>
-            <a href="consulta_historial.html" class="card">
-                <div class="card-label">Consulta Historial</div>
-            </a>
+            
         </div>
-        
-
         
         <div class="card-wrapper">
             <div class="card"></div> 
@@ -48,7 +47,9 @@
             <div class="card"></div>
         </div>
         
-        <div class="result-label">Registrar<br>Resultados</div>
+        <a href="{{ route('registrarresultadouno.index')}}" class="card3">
+            <div class="card-label3">Registrar Resultado</div>
+        </a>
         
         <div class="player-stats">Consultar <br>Estadísticas de<br>Jugadores</div>
         

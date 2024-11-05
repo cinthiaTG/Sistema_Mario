@@ -3,6 +3,7 @@
 * {
   margin: 0px;
   padding: 0px;
+  color: black;
 }
 
 body {
@@ -128,6 +129,56 @@ body {
     font-size: 24px;
     font-family: Montserrat;
     font-weight: 700;
+    margin-left: 25%;
+  }
+
+  /* Positions */
+
+  .card-label0 {
+    position: absolute;
+    font-size: 24px;
+    font-family: Montserrat;
+    font-weight: 700;
+    margin-left: 22%;
+    margin-top: 78%;
+  }
+
+  .card-label1 {
+    position: absolute;
+    font-size: 24px;
+    font-family: Montserrat;
+    font-weight: 700;
+    margin-left: 17%;
+    margin-top: 78%;
+  }
+
+  .card-label2 {
+    position: absolute;
+    font-size: 24px;
+    font-family: Montserrat;
+    font-weight: 700;
+    margin-left: 17%;
+    margin-top: 78%;
+  }
+  
+  .card-label3 {
+    position: absolute;
+    font-size: 24px;
+    font-family: Montserrat;
+    font-weight: 700;
+    margin-left: 12%;
+    margin-top: 78%;
+  }
+
+  .card3 {
+    top: 66.6%;
+    left: 12.4%;
+    width: 317px;
+    height: 306px;
+    background: white;
+    border-radius: 20px;
+    border: 2px black solid;
+    position: absolute;
   }
   
   .card-label:nth-child(4) {
