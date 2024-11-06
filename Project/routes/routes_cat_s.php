@@ -6,6 +6,7 @@ use App\Http\Controllers\LoginController;
 use App\Http\Controllers\PerfilController;
 use App\Http\Controllers\Perfil2Controller;
 use App\Http\Controllers\RegistrarJugadorController;
+use App\Http\Controllers\RegistrarTorneoController;
 use App\Http\Controllers\SignupController;
 use Illuminate\Support\Facades\Route;
 
@@ -22,8 +23,8 @@ Route::group(['namespace' => 'App\Http\Controllers'], function() {
     Route::group(['prefix' => 'modulos/signup'], function(){
         Route::get('/', [SignupController::class, 'index'])->name('signup.index');
     });
-    Route::group(['prefix' => 'modulos/creartorneo'], function(){
-        Route::get('/', [CrearTorneoController::class, 'index'])->name('creartorneo.index');
+    Route::group(['prefix' => 'modulos/registartorneo'], function(){
+        Route::get('/', [RegistrarTorneoController::class, 'index'])->name('registartorneo.index');
     });
     Route::group(['prefix' => 'modulos/registarjugador'], function(){
         Route::get('/', [RegistrarJugadorController::class, 'index'])->name('registrarjugador.index');

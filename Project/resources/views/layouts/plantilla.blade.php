@@ -29,7 +29,7 @@
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item"><a class="nav-link" href="{{ route('vistas.noticias') }}">Noticias</a></li>
                     <li class="nav-item"><a class="nav-link" href="{{ route('vistas.enVivo') }}">En Vivo</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Rankings</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{{ route('vistas.ranking') }}">Rankings</a></li>
                     <li class="nav-item"><a class="nav-link" href="#">Favoritos</a></li>
                     <li class="nav-item"><a class="nav-link" href="#">Calendario</a></li>
                     <li class="nav-item"><a class="nav-link" href="#">Estadísticas</a></li>

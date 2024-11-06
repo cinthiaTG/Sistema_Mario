@@ -31,5 +31,10 @@ class VistasController extends Controller{
         {
             return view("modulos.vistas.perfila");
         }
+        public function ranking()
+        {
+            return view("modulos.vistas.ranking");
+        }
+
 
 }

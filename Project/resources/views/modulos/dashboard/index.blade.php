@@ -23,13 +23,13 @@
         <div class="sub-message">¿Qué buscas hacer hoy?</div>
         
         <div class="card-container">
-            <a href="{{ route('creartorneo.index')}}" class="card">
+            <a href="{{ route('registartorneo.index')}}" class="card">
                 <div class="card-label">Crear Torneo</div>
             </a>
             <a href="{{ route('registrarjugador.index')}}" class="card">
-                <div class="card-label">Registrar Equipo</div>
+                <div class="card-label">Registrar Jugadores</div>
             </a>
-            <a href="consulta_historial.html" class="card">
+            <a href="#" class="card">
                 <div class="card-label">Consulta Historial</div>
             </a>
         </div>
