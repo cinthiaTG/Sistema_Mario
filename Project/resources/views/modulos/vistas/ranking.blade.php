@@ -42,7 +42,7 @@
 
         <!--estadisticas de los jugadores -->
         <section class="player-stats">
-            <h2>Estadísticas de Jugadores</h2>
+            <h2>Ranking de Jugadores</h2>
             <table class="stats-table">
                 <thead>
                     <tr>
