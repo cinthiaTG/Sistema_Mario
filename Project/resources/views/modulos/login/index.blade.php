@@ -5,145 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Laravel 11 | Posts</title>
-    
-    <style>
-
-* {
-    box-sizing: border-box;
-}
-
-body {
-    margin: 0;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.container {
-    width: 100%;
-    height: 100%;
-    position: relative;
-    border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 20px;
-    gap: 15px;
-}
-
-.main-text {
-    color: #FF0000;
-    font-size: 25px;
-    font-family: Inter, sans-serif;
-    font-weight: 700;
-    margin-bottom: 20px;
-    text-align: center;
-}
-
-.sub-text {
-    font-size: 15px;
-    font-family: Inter, sans-serif;
-    font-weight: 500;
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-.register-link {
-    color: #00B5FF;
-    cursor: pointer;
-}
-
-.input-box {
-    width: 340px;
-    height: 28px;
-    background: white;
-    border: 1px black solid;
-    margin-bottom: 30px;
-}
-
-.input-label {
-    color: black;
-    font-size: 13px;
-    font-family: Inter, sans-serif;
-    font-weight: 500;
-    margin-bottom: 5px;
-    display: block;
-    text-align: left;
-}
-
-.remember-label {
-    color: black;
-    font-size: 10px;
-    font-family: Inter, sans-serif;
-    font-weight: 500;
-    display: inline-block;
-    margin-top: 8px;
-}
-
-.checkbox {
-    width: 12px;
-    height: 12px;
-    background: white;
-    border: 1px black solid;
-    display: inline-block;
-    vertical-align: middle;
-    
-    margin-right: 5px;
-}
-
-.login-button {
-    width: 230px;
-    height: 35px;
-    margin-left: 60px;
-    background: #E03131;
-    border: 1px #E03131 solid;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-    color: white;
-    font-size: 15px;
-    font-family: Inter, sans-serif;
-    font-weight: 700;
-    margin-top: 20px;
-}
-
-.header {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 20px;
-}
-
-.logo-text {
-    color: #0A0909;
-    font-size: 50px;
-    font-family: Inter, sans-serif;
-    font-weight: 700;
-    margin-bottom: 10px;
-    margin-left: 20px;
-}
-
-.logo-image {
-    width: 70px;
-    height: 65px;
-    border-radius: 50%;
-    margin-left: 10px;
-    margin-bottom: 10px;
-}
-
-    </style>
-    
+    <link rel="stylesheet" href="{{ asset('css/login.css') }}"> 
 </head>
 <body>
     <div class="container">
         <div class="header">
             <div class="logo-text">SPORTIVO</div>
-            <img class="logo-image" src="images/logo.png" alt="Logo"/>
+            <img class="logo-image" src="{{ asset('img/logo.png') }}" alt="logo">
         </div>
         
         <div class="main-text">Gestiona tu pasión, lidera tu equipo</div>
@@ -152,15 +20,19 @@ body {
         </div>
 
         <div class="form-container">
-            <div class="input-label email-label">Correo Electrónico</div>
-            <div class="input-box email-box"></div>
+            <label class="input-label email-label" for="email">Correo Electrónico</label>
+            <input type="email" id="email" class="input-box email-box">
 
-            <div class="input-label password-label">Contraseña</div>
-            <div class="input-box password-box"></div>
+            <label class="input-label password-label" for="password">Contraseña</label>
+            <input type="password" id="password" class="input-box password-box">
+            
             <div class="remember-label">
-            <div class="checkbox"></div>Recordar</div>
+                <input type="checkbox" class="checkbox">Recordar
+            </div>
+            
             <div class="login-button">Log in</div>
         </div>
     </div>
 </body>
 </html>
+

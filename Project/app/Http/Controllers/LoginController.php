@@ -6,7 +6,13 @@ use Illuminate\Http\Request;
 use App\Models\User;
 
 class LoginController extends Controller{
-    public function index(){
-        return view("modulos.login.index");
+    public function login(){
+        return view("login");
+    }
+    public function singup(){
+        return view("singup");
+    }
+    public function perfil(){
+        return view("perfil");
     }
 }
