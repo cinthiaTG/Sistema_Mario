@@ -9,4 +9,10 @@ class LoginController extends Controller{
     public function login(){
         return view("login");
     }
+    public function singup(){
+        return view("singup");
+    }
+    public function perfil(){
+        return view("perfil");
+    }
 }

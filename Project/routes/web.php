@@ -16,6 +16,8 @@ use App\Http\Controllers\LoginController;
 */
 
 Route::get('/', [LoginController::class, 'login'])->name('login');
+Route::get('/singup', [LoginController::class, 'singup'])->name('singup');
+Route::get('/perfil', [LoginController::class, 'perfil'])->name('perfil');
 
 include(base_path('routes/routes_cat_s.php'));
 include(base_path('routes/routes_cat_c.php'));

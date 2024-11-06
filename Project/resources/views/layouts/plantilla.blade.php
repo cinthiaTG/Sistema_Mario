@@ -14,7 +14,7 @@
             <input type="text" class="form-control me-3 w-auto" placeholder="Buscar..." aria-label="Buscar">
             <a href="#" class="text-white me-3">Clasificación</a>
             <a href="#" class="text-white me-3" data-bs-toggle="modal" data-bs-target="#notificacionesModal">Notificaciones</a>
-            <a href="#" class="text-white">Perfil</a>
+            <a href="{{route('vistas.perfila')}}" class="text-white">Perfil</a>
         </div>
     </header>
 

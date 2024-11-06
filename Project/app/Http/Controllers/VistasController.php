@@ -27,4 +27,9 @@ class VistasController extends Controller{
             return view("modulos.vistas.equipo");
         }
 
+        public function perfila()
+        {
+            return view("modulos.vistas.perfila");
+        }
+
 }
