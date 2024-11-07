@@ -10,24 +10,38 @@
     <div class="container">
         <div class="form-box">
             <div class="main-text">Sign Up</div>
-            <label class="input-label" for="nombre">Nombre</label>
-            <input type="text" id="nombre" class="input-box">
-            
-            <label class="input-label" for="apellido">Apellido</label>
-            <input type="text" id="apellido" class="input-box">
-            
-            <label class="input-label" for="email">Correo Electrónico</label>
-            <input type="email" id="email" class="input-box">
-            
-            <label class="input-label" for="password">Contraseña</label>
-            <input type="password" id="password" class="input-box">
-            
-            <div class="terms">
-                <div class="checkbox"></div>
-                <span class="remember-label">Estoy de acuerdo con los</span>
-                <span class="register-link">&nbsp;términos y condiciones.</span>
-            </div>
-            <a href="{{ route('login') }}" class="btn btn-primary btn-block login-button">Log in</a>
+            <form action="/ruta-del-servidor" method="POST">
+                <label class="input-label" for="nombre">Nombre</label>
+                <input type="text" id="nombre" name="nombre" class="input-box" required>
+                
+                <label class="input-label" for="email">Correo Electrónico</label>
+                <input type="email" id="email" name="email" class="input-box" required>
+                
+                <label class="input-label" for="password">Contraseña</label>
+                <input type="password" id="password" name="password" class="input-box" required>
+
+                <label class="input-label" for="password_confirm">Confirmación de Contraseña</label>
+                <input type="password" id="password_confirm" name="password_confirm" class="input-box" required>
+
+                <!--
+                administrador,entrenador, jugador, árbitro,
+                -->
+                <label class="input-label" for="rol">Rol</label>
+                <select id="rol" name="rol" class="input-box" required>
+                    <option value="1">Aficionado</option>
+                    <option value="2">Entrenador</option>
+                    <option value="3">Jugador</option>
+                    <option value="4">Arbitro</option>
+                </select>
+
+                <div class="terms">
+                    <input type="checkbox" id="terms" name="terms" required>
+                    <label for="terms" class="remember-label">Estoy de acuerdo con los</label>
+                    <a href="#" class="register-link">términos y condiciones</a>.
+                </div>
+
+                <button type="submit" class="btn btn-primary btn-block login-button">Register</button>
+            </form>
         </div>
     </div>
 </body>
