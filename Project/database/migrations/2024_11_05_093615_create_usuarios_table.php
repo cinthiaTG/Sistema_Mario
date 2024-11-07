@@ -13,7 +13,7 @@ return new class extends Migration
             $table->string('email')->unique();
             $table->string('contraseña');
             $table->tinyInteger('activo');
-            $table->unsignedBigInteger('rol_id');
+            $table->unsignedBigInteger('rol_id')->nullable();
 
             $table->foreign('rol_id')->references('id')->on('roles')->onDelete('cascade');
             

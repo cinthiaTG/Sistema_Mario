@@ -150,7 +150,7 @@ body {
 
         <div class="sub-text">
             <span>No tienes una cuenta? </span>
-        <a class="otro" href="{{ route('singup') }}" class="btn btn-primary btn-block login-button">Registrate ahora</a>
+        <a class="otro" href="{{ route('users.create') }}" class="btn btn-primary btn-block login-button">Registrate ahora</a>
         </div>
 
         <div class="form-container">
