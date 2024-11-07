@@ -16,7 +16,7 @@ body {
 .container {
   width: 1440px;
   height: 1259px;
-  position: absolute;
+  position: relative;
   background: white;
 }
   
@@ -170,17 +170,19 @@ body {
     margin-top: 78%;
   }
 
-  .card3 {
-    top: 66.6%;
-    left: 12.4%;
+
+.card3 {
+    position: absolute; /* Cambia a absolute */
+    top: 59.2%;
+    left: 11.7%;
     width: 317px;
     height: 306px;
     background: white;
     border-radius: 20px;
-    border: 2px black solid;
-    position: absolute;
-  }
-  
+    border: 2px solid black;
+    z-index: 10;
+}
+
   .card-label:nth-child(4) {
     left: 78px;
     top: 240px;
