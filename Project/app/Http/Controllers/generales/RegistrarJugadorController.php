@@ -1,12 +1,12 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\generales;
 
+use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-use App\Models\User;
 
-class RegistrarJugadorController extends Controller{
-    public function index(){
+class RegistrarJugadorController extends Controller {
+    public function index() {
         return view("modulos.registrarjugador.index");
     }
 }
