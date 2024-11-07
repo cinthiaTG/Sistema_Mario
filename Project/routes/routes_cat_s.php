@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ConsultarJugadorController;
 use App\Http\Controllers\CrearTorneoController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\LoginController;
@@ -50,5 +51,7 @@ Route::group(['namespace' => 'App\Http\Controllers'], function() {
         Route::get('/', [RegistrarResultadoDosController::class, 'index'])->name('registrarresultadodos.index');
     });
 
-
+    Route::group(['prefix' => 'modulos/consultarjugador'], function(){
+        Route::get('/', [ConsultarJugadorController::class, 'index'])->name('consultarjugador.index');
+    });
 });
