@@ -11,7 +11,7 @@ return new class extends Migration
             $table->id();
             $table->string('nombre');
             $table->string('email')->unique();
-            $table->string('contraseña');
+            $table->string('password');
             $table->unsignedBigInteger('rol_id');
 
             $table->foreign('rol_id')->references('id')->on('roles')->onDelete('cascade');
