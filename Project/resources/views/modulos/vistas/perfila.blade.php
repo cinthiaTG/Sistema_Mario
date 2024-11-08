@@ -18,7 +18,11 @@
             <li>Rol (Jugador, Entrenador, Árbitro, Fanático):</li>
         </ul>
     </div>
-
+<br>
+<br>
+<br>
+<br>
+<br>
 </section>
 </div>
 </main>

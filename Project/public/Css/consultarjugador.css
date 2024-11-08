@@ -18,6 +18,7 @@ body {
   height: 1259px;
   position: relative;
   background: white;
+  filter: blur(3px);
 }
   
 .sidebar {
@@ -25,7 +26,7 @@ body {
   top: 0;
   left: 0;
   width: 150px;
-  height: 100vh;
+  height: 100%;
   background-color: black;
   display: flex;
   flex-direction: column;
@@ -98,6 +99,7 @@ body {
     position: absolute;
     left: 223px;
     top: 187px;
+    filter: blur(3px);
   }
 
   .card-container2 {
@@ -106,6 +108,7 @@ body {
     position: absolute;
     left: 223px;
     top: 539px;
+    filter: blur(3px);
   }
   
   .card {
@@ -279,4 +282,46 @@ body {
   border-radius: 46px;
   position: absolute;
   margin-left: 15px;
+}
+
+.card-search {
+  width: 600px;
+  height: 150px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  position: absolute;
+  left: 35%;
+  top: 600px;
+  filter: none;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.card-labelsearch{
+  font-size: 30px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+#search-input{
+  width: 120%;
+  padding: 3px;
+  border-radius: 8px;
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+.search-button{
+  width: 20%;
+  padding: 1px;
+  background-color: black;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
 }

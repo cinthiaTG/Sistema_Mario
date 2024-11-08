@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Interfaz de Administrador</title>
-    <link rel="stylesheet" href="{{ asset('css/dashboard.css') }}"> 
+    <link rel="stylesheet" href="{{ asset('css/consultarjugador.css') }}"> 
 </head>
 <body>
     <div class="container">
@@ -21,6 +21,18 @@
             <span>Hola </span><span class="username">@Nombre del usuario</span>
         </div>
         <div class="sub-message">¿Qué buscas hacer hoy?</div>
+
+        <!-- search -->
+        <div class="card-search">
+            <form method="get" id="search-form">
+                   <div class="card-labelsearch">Consultar un Jugador</div>
+                   <br>
+                   <input type="text" id="search-input" placeholder="Buscar"  />
+                   <input class="search-button" type="submit" value="Buscar" />
+                   <i class="search-icon"></i>
+             </form>
+        </div>
+         <!-- search -->
         
         <div class="card-container">
             <a href="{{ route('creartorneo.index')}}" class="card">
