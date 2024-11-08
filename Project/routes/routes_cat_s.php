@@ -5,6 +5,7 @@ use App\Http\Controllers\CrearTorneoController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\PerfilController;
+use App\Http\Controllers\PerfilJugadorController;
 use App\Http\Controllers\Perfil2Controller;
 use App\Http\Controllers\RegistrarJugadorController;
 use App\Http\Controllers\RegistrarResultadoUnoController;
@@ -53,5 +54,9 @@ Route::group(['namespace' => 'App\Http\Controllers'], function() {
 
     Route::group(['prefix' => 'modulos/consultarjugador'], function(){
         Route::get('/', [ConsultarJugadorController::class, 'index'])->name('consultarjugador.index');
+    });
+
+    Route::group(['prefix' => 'modulos/perfiljugador'], function(){
+        Route::get('/', [PerfilJugadorController::class, 'index'])->name('perfiljugador.index');
     });
 });

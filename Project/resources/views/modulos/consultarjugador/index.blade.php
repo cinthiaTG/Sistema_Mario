@@ -24,14 +24,13 @@
 
         <!-- search -->
         <div class="card-search">
-            <form method="get" id="search-form">
-                   <div class="card-labelsearch">Consultar un Jugador</div>
-                   <br>
-                   <input type="text" id="search-input" placeholder="Buscar"  />
-                   <input class="search-button" type="submit" value="Buscar" />
-                   <i class="search-icon"></i>
-             </form>
-        </div>
+            <form method="get" action="{{ route('perfiljugador.index') }}" id="search-form">
+                <div class="card-labelsearch">Consultar un Jugador</div>
+                <br>
+                <input type="text" id="search-input" name="search" placeholder="Buscar" />
+                <input class="search-button" type="submit" value="Buscar" />
+            </form>
+        </div>        
          <!-- search -->
         
         <div class="card-container">
