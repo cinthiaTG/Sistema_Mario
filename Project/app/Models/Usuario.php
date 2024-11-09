@@ -12,6 +12,7 @@ class Usuario extends Model
     "email",
     "contraseña",
     "activo",
+    "rol_id"
     
   ];
   const CREATED_AT = 'created_at';

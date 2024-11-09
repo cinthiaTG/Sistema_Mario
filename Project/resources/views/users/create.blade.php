@@ -19,15 +19,15 @@
                 <label class="input-label" for="email">Correo Electrónico</label>
                 <input type="email" id="email" name="email" class="input-box" required>
                 
-                <label class="input-label" for="password">Contraseña</label>
-                <input type="password" id="contraseña" name="password" class="input-box" required>
+                <label class="input-label" for="contraseña">Contraseña</label>
+                <input type="password" id="contraseña" name="contraseña" class="input-box" required>
                 
                 <label class="input-label" for="rol">Rol</label>
                 <select id="rol" name="rol_id" class="input-box" required>
                     <option value="1">Aficionado</option>
                     <option value="2">Entrenador</option>
                     <option value="3">Jugador</option>
-                    <option value="4">Arbitro</option>
+                    <option value="4">Árbitro</option>
                 </select>
 
                 <div class="terms">
@@ -38,7 +38,7 @@
 
                 <button type="submit" class="btn btn-primary">Guardar</button>
                 <a href="{{ route('users.index') }}" class="btn btn-secondary">Cancelar</a>
-                       </form>
+            </form>
         </div>
     </div>
 </body>
