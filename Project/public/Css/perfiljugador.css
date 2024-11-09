@@ -55,6 +55,11 @@ body {
     margin-bottom: 20px; /* Espaciado entre íconos */
 }
 
+.photo{
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
 .container {
     margin-left: 100px;
     width: 500px;
@@ -69,38 +74,7 @@ body {
     font-weight: bold;
     margin-bottom: 20px;
     color: #333;
-}
-
-.tournament-form label {
-    font-weight: bold;
-    font-size: 14px;
-    margin-bottom: 5px;
-    display: block;
-    color: #333;
-}
-
-.tournament-form input[type="text"],
-.tournament-form input[type="date"],
-.tournament-form input[type="time"],
-.tournament-form input[type="file"] {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 15px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 14px;
-}
-
-.file-input {
-    margin-bottom: 15px;
-}
-
-.section-title {
-    font-size: 18px;
-    font-weight: bold;
-    margin-top: 20px;
-    margin-bottom: 10px;
-    color: #444;
+    text-align: center;
 }
 
 .save-button {
@@ -135,4 +109,18 @@ body {
     margin-bottom: 25px;
     background: #53AA51;
     border-radius: 50%;
+}
+
+.profile-details {
+    list-style-type: none;
+    padding: 0;
+    margin-top: 20px;
+}
+
+.profile-details li {
+    color: black;
+    font-size: 16px;
+    margin-bottom: 12px;
+    font-weight: bold;
+    margin-bottom: 30px;
 }
