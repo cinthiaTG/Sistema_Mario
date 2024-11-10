@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Laravel 11 | Posts</title>
-    
+
     <style>
 
 * {
@@ -90,7 +90,7 @@ body {
     border: 1px black solid;
     display: inline-block;
     vertical-align: middle;
-    
+
     margin-right: 5px;
 }
 
@@ -137,7 +137,7 @@ body {
 }
 
     </style>
-    
+
 </head>
 <body>
     <div class="container">
@@ -145,13 +145,14 @@ body {
             <div class="logo-text">SPORTIVO</div>
             <img class="logo-image" src="{{ asset('img/logo.png') }}" alt="logo">
         </div>
-        
+
         <div class="main-text">Gestiona tu pasión, lidera tu equipo</div>
 
         <div class="sub-text">
             <span>No tienes una cuenta? </span>
         <a class="otro" href="{{ route('users.create') }}" class="btn btn-primary btn-block login-button">Registrate ahora</a>
-        </div>
+            {{-- aqui tambien te manda a una ruta usando php directa --}}
+    </div>
 
         <div class="form-container">
                 <!-- Campo de correo electrónico -->
@@ -159,25 +160,25 @@ body {
                     <label for="email" class="input-label email-label">Correo Electrónico</label>
                     <input type="email" id="email" name="email" class="input-box email-box" required>
                 </div>
-        
+
                 <!-- Campo de contraseña -->
                 <div class="form-group">
                     <label for="password" class="input-label password-label">Contraseña</label>
                     <input type="password" id="password" name="password" class="input-box password-box" required>
                 </div>
-        
+
                 <!-- Casilla de verificación "Recordar" -->
                 <div class="form-group remember-label">
                     <input type="checkbox" id="remember" name="remember" class="checkbox">
                     <label for="remember">Recordar</label>
                 </div>
-        
+
                 <!-- Botón de inicio de sesión -->
                 <a href="{{ route('vistas.noticias') }}" class="btn btn-primary btn-block login-button">Log in Aficionado</a>
                 <a href="{{ route('dashboard.index') }}" class="btn btn-primary btn-block login-button">Log in Entrenador</a>
 
         </div>
-        
+
     </div>
 </body>
 </html>

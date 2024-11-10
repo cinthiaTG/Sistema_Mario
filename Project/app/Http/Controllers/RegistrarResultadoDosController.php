@@ -8,5 +8,6 @@ use App\Models\User;
 class RegistrarResultadoDosController extends Controller{
     public function index(){
         return view("modulos.registrarresultadodos.index");
+        // Esta retortnando una vista obviamente
     }
 }

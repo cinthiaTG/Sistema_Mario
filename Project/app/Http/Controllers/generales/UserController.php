@@ -12,6 +12,7 @@ class UserController extends Controller
     {
         $users = Usuario::all();
         return view('users.index', compact('users'));
+        // este es el que usas en web.php y estas usando una vista la de
     }
 
     public function create()
@@ -26,15 +27,15 @@ class UserController extends Controller
             'nombre' => 'required|string|max:255',
             'email' => 'required|email|unique:usuarios,email',
             'contraseña' => 'required',  // Cambié a 'contraseña'
-            'rol_id' => 'required|in:1,2,3,4',  
+            'rol_id' => 'required|in:1,2,3,4',
         ]);
 
         // Creando un nuevo us
         Usuario::create([
             'nombre' => $request->nombre,
             'email' => $request->email,
-            'contraseña' => bcrypt($request->contraseña),
-            'activo' => 1, 
+            'contraseña' => bcrypt($request->password),
+            'activo' => 1,
             'rol_id' => $request->rol_id,
         ]);
 
@@ -61,8 +62,8 @@ class UserController extends Controller
     {
         $request->validate([
             'nombre' => 'required',
-            'email' => 'required|email|unique:usuarios,email,' . $id, 
-            'rol_id' => 'required|in:1,2,3,4',  
+            'email' => 'required|email|unique:usuarios,email,' . $id,
+            'rol_id' => 'required|in:1,2,3,4',
         ]);
 
         $user = Usuario::findOrFail($id);
