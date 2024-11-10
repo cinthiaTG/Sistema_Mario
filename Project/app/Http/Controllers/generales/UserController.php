@@ -12,7 +12,7 @@ class UserController extends Controller
     {
         $users = Usuario::all();
         return view('users.index', compact('users'));
-        // este es el que usas en web.php y estas usando una vista la de
+        // este es la vista del archivo al que te va redirigir por eso empieza por view
     }
 
     public function create()
@@ -41,6 +41,7 @@ class UserController extends Controller
 
         // Redirige con un mensaje de exito y llega a la vista de index
         return redirect()->route('users.index')->with('success', 'Usuario creado con éxito');
+        // te esta redirigiendo a la clase?? si te dirige a la clase de usercontroller y esa si te manda a la vista
     }
 
     // Muestra los detalles de un usuario específico
