@@ -39,6 +39,23 @@ class UserController extends Controller
             'rol_id' => $request->rol_id,
         ]);
 
+        $rol = $request->rol_id;
+
+        switch ($rol) {
+            case '1':
+                return view('modulos.vistas.noticia');
+                break;
+            case '2':
+                return view();
+                break;
+            case '3':
+                return view();
+                break;
+            case '4':
+                return view();
+                break;
+        }
+
         // Redirige con un mensaje de exito y llega a la vista de index
         return redirect()->route('users.index')->with('success', 'Usuario creado con éxito');
         // te esta redirigiendo a la clase?? si te dirige a la clase de usercontroller y esa si te manda a la vista
