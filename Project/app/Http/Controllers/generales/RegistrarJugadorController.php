@@ -103,14 +103,15 @@ class RegistrarJugadorController extends Controller {
     // Cambiar el estado activo de un jugador a inactivo
     public function destroy($id)
     {
-        // Buscar el jugador en la base de datos
+        // Buscar al jugador en la base de datos
         $jugador = Jugador::findOrFail($id);
 
-        // Actualizar el estado activo a 0 (inactivo)
-        $jugador->update(['activo' => 0]);
+        // Eliminar al jugador
+        $jugador->delete();
 
         // Redirigir con un mensaje de éxito
-        return redirect()->route('jugadores.index')->with('success', 'Jugador desactivado con éxito');
+        return redirect()->route('jugadores.index')->with('success', 'Jugador eliminado con éxito');
     }
+
 
 }
