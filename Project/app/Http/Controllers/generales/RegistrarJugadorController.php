@@ -13,17 +13,17 @@ class RegistrarJugadorController extends Controller {
 
     public function store(Request $request)
     {
-        $request->validate([
+        $validatedData = $request->validate([
             'nombre' => 'required|string|max:255',
             'apellido_paterno' => 'required|string|max:255',
             'apellido_materno' => 'required|string|max:255',
-            'edad' => 'required|integer|min:0',
+            'edad' => 'required|integer',
             'posicion' => 'required|string|max:255',
-            'puntos' => 'required|integer|min:0',
-            'asistencias' => 'required|integer|min:0',
-            'tarjetas_rojas' => 'required|integer|min:0',
-            'tarjetas_amarillas' => 'required|integer|min:0',
-            'faltas' => 'required|integer|min:0',
+            'puntos' => 'required|integer',
+            'asistencias' => 'required|integer',
+            'tarjetas_rojas' => 'required|integer',
+            'tarjetas_amarillas' => 'required|integer',
+            'faltas' => 'required|integer',
         ]);
 
         Jugador::create([

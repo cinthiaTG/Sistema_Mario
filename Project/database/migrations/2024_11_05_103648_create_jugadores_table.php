@@ -6,14 +6,13 @@ use Illuminate\Support\Facades\Schema;
 
 return new class extends Migration
 {
-    /**
-     * Run the migrations.
-     */
     public function up(): void
     {
         Schema::create('jugadores', function (Blueprint $table) {
             $table->id();
             $table->string('nombre');
+            $table->string('apellido_paterno');
+            $table->string('apellido_materno');
             $table->integer('edad');
             $table->string('posicion');
             $table->unsignedBigInteger('id_equipo')->nullable();
@@ -21,13 +20,17 @@ return new class extends Migration
             $table->unsignedBigInteger('id_deporte')->nullable();
             $table->foreign('id_deporte')->references('id')->on('deportes')->onDelete('cascade');
 
+            // Stats fields
+            $table->integer('puntos');
+            $table->integer('asistencias');
+            $table->integer('tarjetas_amarillas');
+            $table->integer('tarjetas_rojas');
+            $table->integer('faltas');
+
             $table->timestamps();
         });
     }
 
-    /**
-     * Reverse the migrations.
-     */
     public function down(): void
     {
         Schema::dropIfExists('jugadores');
