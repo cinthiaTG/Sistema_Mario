@@ -3,6 +3,7 @@
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
+use Illuminate\Support\Facades\DB;  // Asegúrate de agregar esta línea
 
 return new class extends Migration
 {
@@ -16,6 +17,15 @@ return new class extends Migration
             $table->string('nombre_deporte');
             $table->timestamps();
         });
+
+        DB::table('deportes')->insert([
+            ['id' => 1, 'nombre_deporte' => 'Futbol Americano'],
+            ['id' => 2, 'nombre_deporte' => 'Futbol Soccer'],
+            ['id' => 3, 'nombre_deporte' => 'Volleyball'],
+            ['id' => 4, 'nombre_deporte' => 'Basketball'],
+        ]);
+
+
     }
 
     /**

@@ -32,7 +32,15 @@
             <label>Edad</label>
             <input type="number" name="edad" required>
 
-            <label>Posición</label>
+            <label class="input-label" for="Deporte">Deportes</label>
+                <select id="Deporte" name="deporte_id" class="input-box" required>
+                    <option value="1">Futbol Americano</option>
+                    <option value="2">Futbol Soccer</option>
+                    <option value="3">Volleyball</option>
+                    <option value="4">Basketball</option>
+                </select>
+
+            <label>Posicion</label>
             <input type="text" name="posicion" required>
 
             <div class="section-title">Estadísticas</div>
@@ -48,8 +56,13 @@
             <label>Tarjetas Amarillas</label>
             <input type="number" name="tarjetas_amarillas" required>
 
+
+
             <label>Faltas</label>
             <input type="number" name="faltas" required>
+
+            {{-- crear algo que permite elija el deporte  y en base a eso elegir la posicion,
+             por consecuente  el deporte tendra los datos predispuestos en la tabla como roles --}}
 
             <button type="submit" class="save-button">Guardar</button>
         </form>

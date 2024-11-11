@@ -10,10 +10,10 @@ class RegistrarJugadorController extends Controller {
     public function index()
     {
         // Obtener todos los jugadores (o filtrarlos según sea necesario)
-        $jugadores = Jugador::all();  // Aquí puedes modificar la consulta según lo que necesites
+        //$jugadores = Jugador::all();  // Aquí puedes modificar la consulta según lo que necesites
 
         // Pasar la variable jugadores a la vista
-        return view('jugadores.index', compact('jugadores'));  // Utiliza 'jugadores' como nombre de la variable
+        return view('modulos.registrarjugador.index');//, compact('jugadores'));  // Utiliza 'jugadores' como nombre de la variable
     }
 
 
@@ -43,6 +43,8 @@ class RegistrarJugadorController extends Controller {
             'tarjetas_rojas' => $request->tarjetas_rojas,
             'tarjetas_amarillas' => $request->tarjetas_amarillas,
             'faltas' => $request->faltas,
+            'id_deporte' => $request->deporte_id,
+
         ]);
 
         return redirect()->route('registrarjugador.index')->with('success', 'Jugador registrado exitosamente');
@@ -112,6 +114,12 @@ class RegistrarJugadorController extends Controller {
         // Redirigir con un mensaje de éxito
         return redirect()->route('jugadores.index')->with('success', 'Jugador eliminado con éxito');
     }
+
+    public function create()
+{
+    return view('modulos.registrarjugador.index'); // Aquí debes tener la vista de creación
+}
+
 
 
 }

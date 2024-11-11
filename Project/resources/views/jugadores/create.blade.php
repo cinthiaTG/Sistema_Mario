@@ -1,46 +1,63 @@
+<!-- resources/views/jugadores/create.blade.php -->
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Formulario de Registro</title>
-    <link rel="stylesheet" href="{{ asset('Css/signup.css') }}">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Registrar Jugador</title>
 </head>
 <body>
-    <div class="container">
-        <div class="form-box">
-            <div class="main-text">Sign Up</div>
-            <form action="{{ route('users.store') }}" method="POST">
-                @csrf <!-- Token CSRF para seguridad -->
 
-                <label class="input-label" for="nombre">Nombre</label>
-                <input type="text" id="nombre" name="nombre" class="input-box" required>
+<div class="container">
+    <h1>Registrar Nuevo Jugador</h1>
 
-                <label class="input-label" for="email">Correo Electrónico</label>
-                <input type="email" id="email" name="email" class="input-box" required>
-
-                <label class="input-label" for="contraseña">Contraseña</label>
-                <input type="password" id="contraseña" name="contraseña" class="input-box" required>
-
-                <label class="input-label" for="rol">Rol</label>
-                <select id="rol" name="rol_id" class="input-box" required>
-                    <option value="1">Aficionado</option>
-                    <option value="2">Entrenador</option>
-                    <option value="3">Jugador</option>
-                    <option value="4">Árbitro</option>
-                </select>
-
-                <div class="terms">
-                    <input type="checkbox" id="terms" name="terms" required>
-                    <label for="terms" class="remember-label">Estoy de acuerdo con los</label>
-                    <a href="#" class="register-link">términos y condiciones</a>.
-                </div>
-
-                <button type="submit" class="btn btn-primary">Guardar</button>
-                <a href="{{ route('users.index') }}" class="btn btn-secondary">Cancelar</a>
-                {{-- te manda directo a la ruta, con apodo --}}
-            </form>
+    <form action="{{ route('jugadores.store') }}" method="POST">
+        @csrf
+        <div class="form-group">
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" class="form-control" required>
         </div>
-    </div>
+        <div class="form-group">
+            <label for="apellido_paterno">Apellido Paterno:</label>
+            <input type="text" id="apellido_paterno" name="apellido_paterno" class="form-control" required>
+        </div>
+        <div class="form-group">
+            <label for="apellido_materno">Apellido Materno:</label>
+            <input type="text" id="apellido_materno" name="apellido_materno" class="form-control" required>
+        </div>
+        <div class="form-group">
+            <label for="edad">Edad:</label>
+            <input type="number" id="edad" name="edad" class="form-control" required>
+        </div>
+        <div class="form-group">
+            <label for="posicion">Posición:</label>
+            <input type="text" id="posicion" name="posicion" class="form-control" required>
+        </div>
+        <div class="form-group">
+            <label for="puntos">Puntos:</label>
+            <input type="number" id="puntos" name="puntos" class="form-control" required>
+        </div>
+        <div class="form-group">
+            <label for="asistencias">Asistencias:</label>
+            <input type="number" id="asistencias" name="asistencias" class="form-control" required>
+        </div>
+        <div class="form-group">
+            <label for="tarjetas_rojas">Tarjetas Rojas:</label>
+            <input type="number" id="tarjetas_rojas" name="tarjetas_rojas" class="form-control" required>
+        </div>
+        <div class="form-group">
+            <label for="tarjetas_amarillas">Tarjetas Amarillas:</label>
+            <input type="number" id="tarjetas_amarillas" name="tarjetas_amarillas" class="form-control" required>
+        </div>
+        <div class="form-group">
+            <label for="faltas">Faltas:</label>
+            <input type="number" id="faltas" name="faltas" class="form-control" required>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Registrar Jugador</button>
+    </form>
+</div>
+
 </body>
 </html>
