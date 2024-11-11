@@ -9,7 +9,7 @@
 <body>
     <br>
     <div class="sidebar">
-        <a href="{{ route('editarjugador.index') }}"> 
+        <a href="{{ route('editarequipo.index') }}"> 
             <img class="icon0" src="{{ asset('img/iB.png') }}" alt="more">
         </a>
 
@@ -23,9 +23,6 @@
         <div class="form-title">Editar Jugador</div>
         <form class="player-form">
             <br>
-            <div class="section-title">ID</div>
-            <input type="Number" required>
-
             <div class="section-title">Nombre</div>
             <input type="text" required>
 

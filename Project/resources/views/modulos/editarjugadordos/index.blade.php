@@ -22,10 +22,7 @@
     <div class="container">
         <div class="form-title">Editar Jugador</div>
         <form class="player-form">
-
-            <div class="section-title">ID</div>
-            <input type="Number" required>
-
+            <br>
             <div class="section-title">Nombre</div>
             <input type="text" required>
 
