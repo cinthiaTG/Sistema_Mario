@@ -7,5 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Instalacion extends Model
 {
+    protected $table = 'instalaciones';
     use HasFactory;
+    protected $fillable = ['nombre_instalacion','ubicacion'];
 }

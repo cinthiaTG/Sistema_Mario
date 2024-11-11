@@ -5,6 +5,7 @@ use App\Http\Controllers\LoginController;
 use App\Http\Controllers\generales\FanController;
 use App\Http\Controllers\generales\UserController;
 use App\Http\Controllers\generales\PerfilController;
+use App\Http\Controllers\generales\RegistrarJugadorController;
 
 
 /*
@@ -31,6 +32,9 @@ Route::get('/users/{id}/edit', [UserController::class, 'edit'])->name('users.edi
 Route::put('/users/{id}', [UserController::class, 'update'])->name('users.update');
 Route::delete('/users/{id}', [UserController::class, 'destroy'])->name('users.destroy');
 Route::post('/login', [UserController::class, 'authenticate'])->name('login.process');
+
+Route::get('/registrar-jugador', [RegistrarJugadorController::class, 'index'])->name('registrarjugador.index');
+Route::post('/registrar-jugador', [RegistrarJugadorController::class, 'store'])->name('registrarjugador.store');
 
 
 

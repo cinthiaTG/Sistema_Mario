@@ -16,11 +16,11 @@ return new class extends Migration
             $table->string('nombre');
             $table->integer('edad');
             $table->string('posicion');
-            $table->unsignedBigInteger('id_equipo');
+            $table->unsignedBigInteger('id_equipo')->nullable();
             $table->foreign('id_equipo')->references('id')->on('equipos')->onDelete('cascade');
-            $table->unsignedBigInteger('id_deporte');
+            $table->unsignedBigInteger('id_deporte')->nullable();
             $table->foreign('id_deporte')->references('id')->on('deportes')->onDelete('cascade');
-            
+
             $table->timestamps();
         });
     }
