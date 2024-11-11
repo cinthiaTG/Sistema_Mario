@@ -1,7 +1,8 @@
 <?php
 
 namespace App\Http\Controllers\generales;
-
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Hash;
 use App\Models\Usuario;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
@@ -15,6 +16,30 @@ class UserController extends Controller
         // este es la vista del archivo al que te va redirigir por eso empieza por view
     }
 
+    public function authenticate(Request $request)
+    {
+        $credentials = $request->only('email', 'password');
+
+        // Buscar el usuario por correo
+        $user = Usuario::where('email', $credentials['email'])->first();
+
+        if ($user && Hash::check($credentials['password'], $user->contraseña)) {
+            // Autenticación exitosa
+            switch ($user->rol_id) {
+                case '1':
+                    return redirect()->route('vistas.noticias');
+                case '2':
+                    return redirect()->route('dashboard.index');
+                case '3':
+                case '4':
+                    return redirect()->route('vistas.noticias');
+            }
+        } else {
+            // Autenticación fallida
+            return redirect()->route('login')->withErrors(['login' => 'Credenciales incorrectas']);
+        }
+    }
+
     public function create()
     {
         return view('users.create');
@@ -26,40 +51,36 @@ class UserController extends Controller
         $request->validate([
             'nombre' => 'required|string|max:255',
             'email' => 'required|email|unique:usuarios,email',
-            'contraseña' => 'required',  // Cambié a 'contraseña'
+            'contraseña' => 'required', // Cambié a 'contraseña'
             'rol_id' => 'required|in:1,2,3,4',
         ]);
 
-        // Creando un nuevo us
+        // Crear el usuario con el hash de la contraseña correcta
         Usuario::create([
             'nombre' => $request->nombre,
             'email' => $request->email,
-            'contraseña' => bcrypt($request->password),
+            'contraseña' => Hash::make($request->contraseña), // Usa Hash::make en lugar de bcrypt
             'activo' => 1,
             'rol_id' => $request->rol_id,
         ]);
 
         $rol = $request->rol_id;
 
+        // Redirige a la vista según el rol
         switch ($rol) {
             case '1':
-                return view('modulos.vistas.noticia');
-                break;
+                return view('modulos.vistas.noticias');
             case '2':
-                return view();
-                break;
+                return view('modulos.dashboard.index');
             case '3':
-                return view();
-                break;
+                return view('modulos.vistas.noticias');
             case '4':
-                return view();
-                break;
+                return view('modulos.vistas.noticias');
         }
 
-        // Redirige con un mensaje de exito y llega a la vista de index
         return redirect()->route('users.index')->with('success', 'Usuario creado con éxito');
-        // te esta redirigiendo a la clase?? si te dirige a la clase de usercontroller y esa si te manda a la vista
     }
+
 
     // Muestra los detalles de un usuario específico
     public function show($id)

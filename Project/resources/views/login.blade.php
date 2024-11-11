@@ -154,30 +154,24 @@ body {
             {{-- aqui tambien te manda a una ruta usando php directa --}}
     </div>
 
-        <div class="form-container">
-                <!-- Campo de correo electrónico -->
-                <div class="form-group">
-                    <label for="email" class="input-label email-label">Correo Electrónico</label>
-                    <input type="email" id="email" name="email" class="input-box email-box" required>
-                </div>
+        <<form action="{{ route('login.process') }}" method="POST">
+            @csrf
+            <!-- Campo de correo electrónico -->
+            <div class="form-group">
+                <label for="email" class="input-label email-label">Correo Electrónico</label>
+                <input type="email" id="email" name="email" class="input-box email-box" required>
+            </div>
 
-                <!-- Campo de contraseña -->
-                <div class="form-group">
-                    <label for="password" class="input-label password-label">Contraseña</label>
-                    <input type="password" id="password" name="password" class="input-box password-box" required>
-                </div>
+            <!-- Campo de contraseña -->
+            <div class="form-group">
+                <label for="password" class="input-label password-label">Contraseña</label>
+                <input type="password" id="password" name="password" class="input-box password-box" required>
+            </div>
 
-                <!-- Casilla de verificación "Recordar" -->
-                <div class="form-group remember-label">
-                    <input type="checkbox" id="remember" name="remember" class="checkbox">
-                    <label for="remember">Recordar</label>
-                </div>
+            <!-- Botón de inicio de sesión -->
+            <button type="submit" class="btn btn-primary btn-block login-button">Log in</button>
+        </form>
 
-                <!-- Botón de inicio de sesión -->
-                <a href="{{ route('vistas.noticias') }}" class="btn btn-primary btn-block login-button">Log in Aficionado</a>
-                <a href="{{ route('dashboard.index') }}" class="btn btn-primary btn-block login-button">Log in Entrenador</a>
-
-        </div>
 
     </div>
 </body>
