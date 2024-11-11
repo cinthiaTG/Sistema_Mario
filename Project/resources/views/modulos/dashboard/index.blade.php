@@ -51,8 +51,8 @@
                 <div class="card-label3">Registrar Resultado</div>
             </a>
 
-            <a href="{{ route('consultarjugador.index')}}" class="card">
-                <div class="card-label4">Consultar Estadísticas &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;de Jugadores</div>
+            <a href="{{ route('editarjugador.index')}}" class="card">
+                <div class="card-label4">Editar Jugador</div>
             </a>
             
         </div>

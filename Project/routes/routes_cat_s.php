@@ -1,6 +1,5 @@
 <?php
 
-use App\Http\Controllers\ConsultarJugadorController;
 use App\Http\Controllers\CrearTorneoController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\LoginController;
@@ -12,6 +11,8 @@ use App\Http\Controllers\RegistrarResultadoUnoController;
 use App\Http\Controllers\RegistrarResultadoDosController;
 use App\Http\Controllers\RegistrarEquipoController;
 use App\Http\Controllers\SignupController;
+use App\Http\Controllers\EditarJugadorController;
+use App\Http\Controllers\EditarJugadorDosController;
 use Illuminate\Support\Facades\Route;
 
 Route::group(['namespace' => 'App\Http\Controllers'], function() {
@@ -52,11 +53,15 @@ Route::group(['namespace' => 'App\Http\Controllers'], function() {
         Route::get('/', [RegistrarResultadoDosController::class, 'index'])->name('registrarresultadodos.index');
     });
 
-    Route::group(['prefix' => 'modulos/consultarjugador'], function(){
-        Route::get('/', [ConsultarJugadorController::class, 'index'])->name('consultarjugador.index');
-    });
-
     Route::group(['prefix' => 'modulos/perfiljugador'], function(){
         Route::get('/', [PerfilJugadorController::class, 'index'])->name('perfiljugador.index');
+    });
+
+    Route::group(['prefix' => 'modulos/editarjugador'], function(){
+        Route::get('/', [EditarJugadorController::class, 'index'])->name('editarjugador.index');
+    });
+
+    Route::group(['prefix' => 'modulos/editarjugadordos'], function(){
+        Route::get('/', [EditarJugadorDosController::class, 'index'])->name('editarjugadordos.index');
     });
 });
