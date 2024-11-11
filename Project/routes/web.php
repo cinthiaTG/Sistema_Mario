@@ -33,6 +33,15 @@ Route::put('/users/{id}', [UserController::class, 'update'])->name('users.update
 Route::delete('/users/{id}', [UserController::class, 'destroy'])->name('users.destroy');
 Route::post('/login', [UserController::class, 'authenticate'])->name('login.process');
 
+// Rutas para Jugadores
+Route::get('/jugadores', [RegistrarJugadorController::class, 'index'])->name('jugadores.index');  // Lista de jugadores
+Route::get('/jugadores/create', [RegistrarJugadorController::class, 'create'])->name('jugadores.create'); // Formulario para crear jugador
+Route::post('/jugadores', [RegistrarJugadorController::class, 'store'])->name('jugadores.store'); // Almacenar jugador
+Route::get('/jugadores/{id}', [RegistrarJugadorController::class, 'show'])->name('jugadores.show'); // Ver jugador
+Route::get('/jugadores/{id}/edit', [RegistrarJugadorController::class, 'edit'])->name('jugadores.edit'); // Formulario de edición
+Route::put('/jugadores/{id}', [RegistrarJugadorController::class, 'update'])->name('jugadores.update'); // Actualizar jugador
+Route::delete('/jugadores/{id}', [RegistrarJugadorController::class, 'destroy'])->name('jugadores.destroy'); // Desactivar jugador
+
 Route::get('/registrar-jugador', [RegistrarJugadorController::class, 'index'])->name('registrarjugador.index');
 Route::post('/registrar-jugador', [RegistrarJugadorController::class, 'store'])->name('registrarjugador.store');
 

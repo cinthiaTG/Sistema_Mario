@@ -24,6 +24,7 @@ class Jugador extends Model
         'tarjetas_rojas',
         'faltas',
     ];
+
     public function equipo()
     {
         return $this->belongsTo(Equipo::class);
