@@ -8,7 +8,7 @@ use App\Http\Controllers\Perfil2Controller;
 use App\Http\Controllers\generales\RegistrarJugadorController;
 use App\Http\Controllers\RegistrarResultadoUnoController;
 use App\Http\Controllers\RegistrarResultadoDosController;
-use App\Http\Controllers\RegistrarEquipoController;
+use App\Http\Controllers\generales\RegistrarEquipoController;
 use App\Http\Controllers\SignupController;
 use Illuminate\Support\Facades\Route;
 
@@ -50,5 +50,8 @@ Route::group(['namespace' => 'App\Http\Controllers\generales'], function() {
     Route::group(['prefix' => 'modulos/registarequipo'], function(){
         Route::get('/', [RegistrarEquipoController::class, 'index'])->name('registrarequipo.index');
     });
+    Route::get('/registrar-jugador', [RegistrarEquipoController::class, 'index'])->name('registrarequipo.index');
+    Route::post('/registrar-jugador', [RegistrarEquipoController::class, 'store'])->name('registrarequipo.store');
+
 
 });

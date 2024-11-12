@@ -31,6 +31,7 @@ class UserController extends Controller
                 case '2':
                     return redirect()->route('dashboard.index');
                 case '3':
+                    return redirect()->route('dashboard.index');
                 case '4':
                     return redirect()->route('vistas.noticias');
             }

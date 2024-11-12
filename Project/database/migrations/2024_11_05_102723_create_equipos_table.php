@@ -15,6 +15,9 @@ return new class extends Migration
             $table->id();
             $table->string('nombre_equipo');
             $table->string('escudo');
+            $table->unsignedBigInteger('id_deporte')->nullable();
+            $table->foreign('id_deporte')->references('id')->on('deportes')->onDelete('cascade');
+
             $table->timestamps();
         });
     }

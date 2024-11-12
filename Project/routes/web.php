@@ -6,7 +6,8 @@ use App\Http\Controllers\generales\FanController;
 use App\Http\Controllers\generales\UserController;
 use App\Http\Controllers\generales\PerfilController;
 use App\Http\Controllers\generales\RegistrarJugadorController;
-
+use App\Models\Rol;
+use App\Http\Controllers\generales\RegistrarEquipoController;
 
 /*
 |--------------------------------------------------------------------------
@@ -32,6 +33,10 @@ Route::get('/users/{id}/edit', [UserController::class, 'edit'])->name('users.edi
 Route::put('/users/{id}', [UserController::class, 'update'])->name('users.update');
 Route::delete('/users/{id}', [UserController::class, 'destroy'])->name('users.destroy');
 Route::post('/login', [UserController::class, 'authenticate'])->name('login.process');
+
+Route::get('/registrar-jugador', [RegistrarEquipoController::class, 'index'])->name('registrarequipo.index');
+Route::post('/registrar-jugador', [RegistrarEquipoController::class, 'store'])->name('registrarequipo.store');
+
 
 // Rutas para Jugadores
 Route::get('/jugadores', [RegistrarJugadorController::class, 'index'])->name('jugadores.index');  // Lista de jugadores
