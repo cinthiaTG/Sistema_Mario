@@ -18,6 +18,10 @@ use App\Http\Controllers\EditarJugadorDosController;
 use App\Http\Controllers\EditarEquipoController;
 use App\Http\Controllers\EditarEquipoDosController;
 
+use App\Http\Controllers\RegistrarCanchaController;
+use App\Http\Controllers\EditarCanchaController;
+use App\Http\Controllers\EditarCanchaDosController;
+
 Route::group(['namespace' => 'App\Http\Controllers'], function() {
 
     // Route::group(['prefix' => 'modulos/login'], function() {
@@ -77,5 +81,17 @@ Route::group(['namespace' => 'App\Http\Controllers'], function() {
 
     Route::group(['prefix' => 'modulos/editarequipodos'], function(){
         Route::get('/', [EditarEquipoDosController::class, 'index'])->name('editarequipodos.index');
+    });
+
+    Route::group(['prefix' => 'modulos/registrarcancha'], function(){
+        Route::get('/', [RegistrarCanchaController::class, 'index'])->name('registrarcancha.index');
+    });
+
+    Route::group(['prefix' => 'modulos/editarcancha'], function(){
+        Route::get('/', [EditarCanchaController::class, 'index'])->name('editarcancha.index');
+    });
+
+    Route::group(['prefix' => 'modulos/editarcanchados'], function(){
+        Route::get('/', [EditarCanchaDosController::class, 'index'])->name('editarcanchados.index');
     });
 });

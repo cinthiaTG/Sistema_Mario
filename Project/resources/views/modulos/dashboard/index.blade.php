@@ -61,6 +61,21 @@
 
         </div>
 
+
+        <div class="card-container3">
+            <a href="{{ route('registrarcancha.index')}}" class="card">
+                <div class="card-label6">Registrar Cancha</div>
+            </a>
+
+            <a href="{{ route('editarcancha.index')}}" class="card">
+                <div class="card-label7">Editar Cancha</div>
+            </a>
+
+            <a href="#" class="card">
+                <div class="card-label8 ">Consultar Historial &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; de Torneos</div>
+            </a>
+        </div>
+
         <div class="circle-wrapper">
             <a href="{{ asset('perfil') }}"><div class="circle"></div></a>
         </div>
