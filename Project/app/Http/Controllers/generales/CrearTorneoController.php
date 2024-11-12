@@ -8,6 +8,6 @@ use App\Http\Controllers\Controller;
 
 class CrearTorneoController extends Controller{
     public function index(){
-        return view("modulos.registrartorneo.index");
+        return view("modulos.crearTorneo.index");
     }
 }

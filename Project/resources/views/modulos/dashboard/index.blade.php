@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Interfaz de Administrador</title>
-    <link rel="stylesheet" href="{{ asset('css/dashboard.css') }}"> 
+    <link rel="stylesheet" href="{{ asset('Css/dashboard.css') }}"> 
 </head>
 <body>
     <div class="container">
@@ -23,7 +23,7 @@
         <div class="sub-message">¿Qué buscas hacer hoy?</div>
         
         <div class="card-container">
-            <a href="{{ route('creartorneo.index')}}" class="card">
+            <a href="{{ route('crearTorneo.index')}}" class="card">
                 <div class="card-label0">Crear Torneo</div>
             </a>
             <a href="{{ route('registrarequipo.index')}}" class="card">

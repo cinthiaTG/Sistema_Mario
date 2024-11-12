@@ -31,8 +31,8 @@ Route::group(['namespace' => 'App\Http\Controllers'], function() {
         Route::get('/', [SignupController::class, 'index'])->name('signup.index');
     });
 
-    Route::group(['prefix' => 'modulos/creartorneo'], function(){
-        Route::get('/', [CrearTorneoController::class, 'index'])->name('creartorneo.index');
+    Route::group(['prefix' => 'modulos/crearTorneo'], function(){
+        Route::get('/', [CrearTorneoController::class, 'index'])->name('crearTorneo.index');
     });
 
     Route::group(['prefix' => 'modulos/registarjugador'], function(){
