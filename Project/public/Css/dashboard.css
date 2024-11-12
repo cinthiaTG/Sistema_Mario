@@ -107,6 +107,14 @@ body {
     left: 223px;
     top: 539px;
   }
+
+  .card-container3 {
+    width: 1115px;
+    height: 306px;
+    position: absolute;
+    left: 223px;
+    top: 891px;
+  }
   
   .card {
     width: 317px;
@@ -194,6 +202,33 @@ body {
     font-weight: 700;
     margin-left: 21%;
     margin-top: 78%;
+  }
+
+  .card-label6 {
+    position: absolute;
+    font-size: 24px;
+    font-family: Montserrat;
+    font-weight: 700;
+    margin-left: 16%;
+    margin-top: 78%;
+  }
+
+  .card-label7 {
+    position: absolute;
+    font-size: 24px;
+    font-family: Montserrat;
+    font-weight: 700;
+    margin-left: 22%;
+    margin-top: 78%;
+  }
+
+  .card-label8 {
+    position: absolute;
+    font-size: 24px;
+    font-family: Montserrat;
+    font-weight: 700;
+    margin-left: 15%;
+    margin-top: 70%;
   }
 
   .card-label:nth-child(4) {

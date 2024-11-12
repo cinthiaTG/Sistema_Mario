@@ -15,10 +15,13 @@ use App\Http\Controllers\EditarJugadorDosController;
 use App\Http\Controllers\SignupController;
 use App\Http\Controllers\EditarEquipoController;
 use App\Http\Controllers\EditarEquipoDosController;
+use App\Http\Controllers\RegistrarCanchaController;
+use App\Http\Controllers\EditarCanchaController;
+use App\Http\Controllers\EditarCanchaDosController;
 use Illuminate\Support\Facades\Route;
 
 Route::group(['namespace' => 'App\Http\Controllers'], function() {
-   
+
     // Route::group(['prefix' => 'modulos/login'], function() {
     //     Route::get('/', [LoginController::class, 'index'])->name('login.index');
     // });
@@ -45,6 +48,8 @@ Route::group(['namespace' => 'App\Http\Controllers'], function() {
 
     Route::group(['prefix' => 'modulos/registarequipo'], function(){
         Route::get('/', [RegistrarEquipoController::class, 'index'])->name('registrarequipo.index');
+        Route::get('/prueba', [RegistrarEquipoController::class, 'read'])->name('registrarequipo.read');
+        Route::get('/prueba2', [RegistrarEquipoController::class, 'store'])->name('registrarequipo.store');
     });
 
     Route::group(['prefix' => 'modulos/registrarresultadouno'], function(){
@@ -67,11 +72,21 @@ Route::group(['namespace' => 'App\Http\Controllers'], function() {
         Route::get('/', [EditarJugadorDosController::class, 'index'])->name('editarjugadordos.index');
     });
 
-    Route::group(['prefix' => 'modulos/editarequipo'], function(){
-        Route::get('/', [EditarEquipoController::class, 'index'])->name('editarequipo.index');
-    });
+
 
     Route::group(['prefix' => 'modulos/editarequipodos'], function(){
         Route::get('/', [EditarEquipoDosController::class, 'index'])->name('editarequipodos.index');
+    });
+
+    Route::group(['prefix' => 'modulos/registrarcancha'], function(){
+        Route::get('/', [RegistrarCanchaController::class, 'index'])->name('registrarcancha.index');
+    });
+
+    Route::group(['prefix' => 'modulos/editarcancha'], function(){
+        Route::get('/', [EditarCanchaController::class, 'index'])->name('editarcancha.index');
+    });
+
+    Route::group(['prefix' => 'modulos/editarcanchados'], function(){
+        Route::get('/', [EditarCanchaDosController::class, 'index'])->name('editarcanchados.index');
     });
 });

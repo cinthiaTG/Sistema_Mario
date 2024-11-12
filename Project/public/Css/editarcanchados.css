@@ -1,0 +1,176 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Helvetica Neue', sans-serif;
+}
+
+body {
+    background-color: #f3f3f3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    width: 500px;
+    padding: 20px;
+    background-color: #f7f0f0;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-left: 100px;
+}
+
+.sidebar {
+    width: 60px;
+    height: 100%;
+    background-color: black;
+    position: fixed;
+    left: 0;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 20px;
+}
+
+.sidebar img {
+    width: 30px;
+    height: 30px;
+    margin: 15px 0;
+}
+
+.form-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: black;
+}
+
+.team-form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 20px;
+    row-gap: 15px;
+}
+
+.team-form label {
+    font-size: 14px;
+    color: black;
+    font-weight: bold;
+}
+
+.team-form input[type="text"],
+.team-form input[type="file"],
+.team-form input[type="number"] {
+    width: 100%;
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.field-section {
+    display: flex;
+    margin-top: 20px;
+    grid-column: span 2;
+}
+
+.field-image {
+    flex: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #e0e0e0;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 20px;
+    height: 400px;
+    width: 300px;
+}
+
+.field-image img.field-placeholder {
+    max-width: 100%;
+    max-height: 100%;
+    border-radius: 10px;
+}
+
+.player-list {
+    flex: 1;
+    margin-left: 20px;
+    background-color: #ddd;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 15px;
+}
+
+.section-title {
+    font-size: 18px;
+    font-weight: bold;
+    color: black;
+    margin-bottom: 10px;
+}
+
+.add-player-button {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #555;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+.add-player-button:hover {
+    background-color: #777;
+}
+
+.players {
+    list-style: none;
+}
+
+.players li {
+    margin-bottom: 10px;
+}
+
+.players input[type="text"] {
+    width: 100%;
+    padding: 8px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.save-button {
+    grid-column: span 2;
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #333;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-top: 20px;
+}
+
+.save-button:hover {
+    background-color: #555;
+}
+
+.circle-wrapper {
+    position: fixed;
+    left: 30px;
+    top: 820px;
+}
+
+.circle {
+    width: 81px;
+    height: 83px;
+    background: #53AA51;
+    border-radius: 50%;
+}

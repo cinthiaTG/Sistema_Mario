@@ -5,9 +5,8 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\User;
 
-class EditarEquipoDosController extends Controller{
+class EditarCanchaController extends Controller{
     public function index(){
-        return view("modulos.editarequipodos.index");
+        return view("modulos.editarcancha.index");
     }
-
 }
