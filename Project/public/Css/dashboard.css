@@ -16,10 +16,10 @@ body {
 .container {
   width: 1440px;
   height: 1259px;
-  position: absolute;
+  position: relative;
   background: white;
 }
-  
+
 .sidebar {
   position: fixed;
   top: 0;
@@ -33,7 +33,7 @@ body {
   padding-top: 20px;
 }
 
-  
+
 .icon1 {
   width: 50px;
   height: 50px;
@@ -41,7 +41,7 @@ body {
   left: 41px;
   top: 62px;
 }
-  
+
 .icon2 {
   width: 38px;
   height: 44px;
@@ -49,7 +49,7 @@ body {
    left: 47px;
   top: 150px;
  }
-  
+
 .welcome-message {
   position: absolute;
   left: 188px;
@@ -58,11 +58,11 @@ body {
   font-family: Montserrat;
   font-weight: 700;
 }
-  
+
   .username {
     color: #3CCA3C;
   }
-  
+
   .sub-message {
     position: absolute;
     left: 188px;
@@ -72,26 +72,26 @@ body {
     font-family: Montserrat;
     font-weight: 700;
   }
-  
+
   .icon3,
   .icon4 {
     position: absolute;
   }
-  
+
   .icon3 {
     width: 55px;
     height: 53px;
     left: 36px;
     top: 230px;
   }
-  
+
   .icon4 {
     width: 55px;
     height: 55px;
     margin-left: 42px;
     top: 1070px;
   }
-  
+
   .card-container {
     width: 1115px;
     height: 306px;
@@ -99,7 +99,15 @@ body {
     left: 223px;
     top: 187px;
   }
-  
+
+  .card-container2 {
+    width: 1115px;
+    height: 306px;
+    position: absolute;
+    left: 223px;
+    top: 539px;
+  }
+
   .card {
     width: 317px;
     height: 306px;
@@ -108,22 +116,22 @@ body {
     border: 2px black solid;
     position: absolute;
   }
-  
+
   .card:nth-child(1) {
     left: 0;
     top: 0;
   }
-  
+
   .card:nth-child(2) {
     left: 399px;
     top: 0;
   }
-  
+
   .card:nth-child(3) {
     left: 798px;
     top: 0;
   }
-  
+
   .card-label {
     position: absolute;
     font-size: 24px;
@@ -160,7 +168,7 @@ body {
     margin-left: 17%;
     margin-top: 78%;
   }
-  
+
   .card-label3 {
     position: absolute;
     font-size: 24px;
@@ -170,29 +178,36 @@ body {
     margin-top: 78%;
   }
 
-  .card3 {
-    top: 66.6%;
-    left: 12.4%;
-    width: 317px;
-    height: 306px;
-    background: white;
-    border-radius: 20px;
-    border: 2px black solid;
+  .card-label4 {
     position: absolute;
+    font-size: 24px;
+    font-family: Montserrat;
+    font-weight: 700;
+    margin-left: 23%;
+    margin-top: 78%;
   }
-  
+
+  .card-label5 {
+    position: absolute;
+    font-size: 24px;
+    font-family: Montserrat;
+    font-weight: 700;
+    margin-left: 21%;
+    margin-top: 78%;
+  }
+
   .card-label:nth-child(4) {
     left: 78px;
     top: 240px;
     color: black;
   }
-  
+
   .card-label:nth-child(5) {
     left: 453px;
     top: 240px;
     color: black;
   }
-  
+
   .register-player {
     position: absolute;
     left: 1067px;
@@ -202,7 +217,7 @@ body {
     font-family: Montserrat;
     font-weight: 700;
   }
-  
+
   .card-wrapper {
     width: 1115px;
     height: 306px;
@@ -210,7 +225,7 @@ body {
     left: 223px;
     top: 891px;
   }
-  
+
   .history-label {
     position: absolute;
     left: 265px;
@@ -221,7 +236,7 @@ body {
     font-family: Montserrat;
     font-weight: 700;
   }
-  
+
   .flex-container {
     width: 1115px;
     height: 306px;
@@ -229,7 +244,7 @@ body {
     left: 223px;
     top: 539px;
   }
-  
+
   .result-label,
   .player-stats,
   .team-stats {
@@ -240,23 +255,23 @@ body {
     font-family: Montserrat;
     font-weight: 700;
   }
-  
+
   .result-label {
     left: 311px;
     top: 764px;
   }
-  
+
   .player-stats {
     left: 686px;
     top: 741px;
   }
-  
+
   .team-stats {
     left: 1085px;
     top: 741px;
   }
-  
-  
+
+
 .circle-wrapper {
   width: 81px;
   height: 83px;
@@ -264,7 +279,7 @@ body {
   left: 20px;
   top: 1154px;
 }
-  
+
 .circle {
   width: 81px;
   height: 83px;

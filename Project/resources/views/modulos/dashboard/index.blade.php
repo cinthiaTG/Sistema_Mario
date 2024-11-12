@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Interfaz de Administrador</title>
-    <link rel="stylesheet" href="{{ asset('Css/dashboard.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/dashboard.css') }}">
 </head>
 <body>
     <div class="container">
@@ -23,11 +23,8 @@
         <div class="sub-message">¿Qué buscas hacer hoy?</div>
 
         <div class="card-container">
-            {{-- <a href="{{ route('creartorneo.index')}}" class="card">
+            <a href="{{ route('creartorneo.index')}}" class="card">
                 <div class="card-label0">Crear Torneo</div>
-            </a> --}}
-            <a href="{{ route('registrarinstalacion.index')}}" class="card">
-                <div class="card-label0">Registrar instalacion</div>
             </a>
             <a href="{{ route('registrarequipo.index')}}" class="card">
                 <div class="card-label1">Registrar Equipo</div>
@@ -35,7 +32,6 @@
             <a href="{{ route('registrarjugador.index')}}" class="card">
                 <div class="card-label2">Registrar Jugador</div>
             </a>
-
         </div>
 
         <div class="card-wrapper">
@@ -50,13 +46,20 @@
             <div class="card"></div>
         </div>
 
-        <a href="{{ route('registrarresultadouno.index')}}" class="card3">
-            <div class="card-label3">Registrar Resultado</div>
-        </a>
+        <div class="card-container2">
+            <a href="{{ route('registrarresultadouno.index')}}" class="card">
+                <div class="card-label3">Registrar Resultado</div>
+            </a>
 
-        <div class="player-stats">Consultar <br>Estadísticas de<br>Jugadores</div>
+            <a href="{{ route('editarequipo.index')}}" class="card">
+                <div class="card-label4">Editar Equipo</div>
+            </a>
 
-        <div class="team-stats">Consultar <br>Estadísticas de<br>Equipos</div>
+            <a href="{{ route('editarjugador.index')}}" class="card">
+                <div class="card-label5">Editar Jugador</div>
+            </a>
+
+        </div>
 
         <div class="circle-wrapper">
             <a href="{{ asset('perfil') }}"><div class="circle"></div></a>

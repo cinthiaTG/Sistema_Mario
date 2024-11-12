@@ -5,50 +5,38 @@ namespace App\Http\Controllers\generales;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Equipo;
+use Illuminate\Support\Facades\Storage;
 
 class RegistrarEquipoController extends Controller {
     public function index()
     {
-        // Obtener todos los jugadores (o filtrarlos según sea necesario)
-        //$jugadores = Jugador::all();  // Aquí puedes modificar la consulta según lo que necesites
-
-        // Pasar la variable jugadores a la vista
-        return view('modulos.registrarequipo.index');//, compact('jugadores'));  // Utiliza 'jugadores' como nombre de la variable
+        return view('modulos.registrarequipo.index');
     }
-
 
     public function store(Request $request)
     {
         $validatedData = $request->validate([
             'nombre_equipo' => 'required|string|max:255',
-            'escudo' => 'required|string|max:255',
+            'escudo' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048',
+            'deporte_id' => 'required|exists:deportes,id'
         ]);
 
+        // Almacenar el archivo de imagen
+        $path = $request->file('escudo')->store('public/escudos');
+        $filename = basename($path);
 
-
+        // Crear el equipo en la base de datos
         Equipo::create([
             'nombre_equipo' => $request->nombre_equipo,
-            'escudo' => $request->escudo,
+            'escudo' => $filename,
             'id_deporte' => $request->deporte_id,
-
-
         ]);
 
-        return redirect()->route('registrarequipo.index')->with('success', 'Jugador registrado exitosamente');
+        return redirect()->route('registrarequipo.index')->with('success', 'Equipo registrado exitosamente');
     }
-
-    //Muestra un formulario para editar al usuario
-   // En RegistrarequipoController.php
-
-
-
-
 
     public function create()
     {
-        return view('modulos.registrarequipo.index'); // Aquí debes tener la vista de creación
+        return view('modulos.registrarequipo.index');
     }
-
-
-
 }

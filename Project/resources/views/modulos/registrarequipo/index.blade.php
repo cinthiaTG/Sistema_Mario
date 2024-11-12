@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Interfaz de Administrador</title>
+    <title>Registrar Equipo</title>
     <link rel="stylesheet" href="{{ asset('Css/registrarequipo.css') }}">
 </head>
 <body>
@@ -18,29 +18,31 @@
     </div>
 
     <div class="container">
-        <h1 class="form-title">Registrar Equipo</h1>
+        <h1>Registrar Equipo</h1>
 
-        <form action="{{ route('registrarequipo.store') }}" method="POST">
+        @if(session('success'))
+            <p>{{ session('success') }}</p>
+        @endif
+
+        <form action="{{ route('registrarequipo.store') }}" method="POST" enctype="multipart/form-data">
             @csrf
 
-            <label class="input-label" for="nombre_equipo">Nombre Equipo</label>
-            <input type="text" id="nombre_equipo" name="nombre_equipo" class="input-box" required>
+            <label for="nombre_equipo">Nombre del Equipo</label>
+            <input type="text" id="nombre_equipo" name="nombre_equipo" required>
 
-            <label class="input-label" for="escudo">Escudo </label>
-            <input type="escudo" id="escudo" name="escudo" class="input-box" required>
+            <label for="escudo">Escudo del Equipo</label>
+            <input type="file" id="escudo" name="escudo" accept="image/*" required>
 
-            <label class="input-label" for="Deporte">Deportes</label>
-                <select id="Deporte" name="deporte_id" class="input-box" required>
-                    <option value="1">Futbol Americano</option>
-                    <option value="2">Futbol Soccer</option>
-                    <option value="3">Volleyball</option>
-                    <option value="4">Basketball</option>
-                </select>
+            <label for="deporte_id">Deporte</label>
+            <select id="deporte_id" name="deporte_id" required>
+                <option value="1">Futbol Americano</option>
+                <option value="2">Futbol Soccer</option>
+                <option value="3">Volleyball</option>
+                <option value="4">Basketball</option>
+            </select>
 
-
-            <button type="submit" class="btn btn-primary btn-block login-button">Register</button>
+            <button type="submit" class="save-button">Guardar</button>
         </form>
-
     </div>
 </body>
 </html>

@@ -9,6 +9,5 @@ class Equipo extends Model
 {
     use HasFactory;
     protected $table = 'equipos';
-    protected $fillable = ['nombre_equipo','escudo',        'id_deporte',
-];
+    protected $fillable = ['nombre_equipo', 'escudo', 'id_deporte'];
 }
