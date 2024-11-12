@@ -36,17 +36,6 @@
                 <option value="4">Basquetbol</option>
             </select>
 
-            <label for="team-name">Fecha de Inicio</label>
-            <input id="team-name" type="date" required>
-
-            <label for="team-name">Fecha de Finalización</label>
-            <input id="team-name" type="date" required>
-
-            <label for="team-name">Horarios</label>
-            <input id="team-name" type="time" required>
-
-            
-
             <button type="submit" class="save-button">Guardar</button>
         </form>
     </div>

@@ -29,9 +29,6 @@
                         <th>Nombre</th>
                         <th>Ubicacion</th>
                         <th>Deporte</th>
-                        <th>Fecha de Incio</th>
-                        <th>Fecha de Finalización</th>
-                        <th>Horarios</th>
                         <th>Acciones</th>
                     </tr>
                 </thead>
@@ -41,9 +38,6 @@
                         <th>Estadio Marte R. Gómez</th>
                         <th>C. Alberto Carrera Torres 104, Pedro José Méndez, 87048 Cdad. Victoria, Tamps.</th>
                         <th>Fútbol</th>
-                        <th>12/11/2024</th>
-                        <th>15/11/2024</th>
-                        <th>10:39pm</th>
                         <td><a href="{{ route('editarcanchados.index') }}"><button class="edit-button">Editar</button></a>
                             <button class="quit-button">Eliminar</button>
                         </td>

@@ -68,7 +68,7 @@
             </a>
 
             <a href="#" class="card">
-                <div class="card-label7">Consultar Historial de Torneos</div>
+                <div class="card-label8 ">Consultar Historial &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; de Torneos</div>
             </a>
         </div>
         
