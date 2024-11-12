@@ -38,8 +38,6 @@
             <div class="card"></div> 
         </div>
         
-        <div class="history-label">Consultar Historial<br>de Torneos</div>
-        
         <div class="flex-container">
             <div class="card"></div>
             <div class="card"></div>
@@ -58,7 +56,20 @@
             <a href="{{ route('editarjugador.index')}}" class="card">
                 <div class="card-label5">Editar Jugador</div>
             </a>
-            
+        </div>
+
+        <div class="card-container3">
+            <a href="{{ route('registrarcancha.index')}}" class="card">
+                <div class="card-label6">Registrar Cancha</div>
+            </a>
+
+            <a href="{{ route('editarcancha.index')}}" class="card">
+                <div class="card-label7">Editar Cancha</div>
+            </a>
+
+            <a href="#" class="card">
+                <div class="card-label7">Consultar Historial de Torneos</div>
+            </a>
         </div>
         
         <div class="circle-wrapper">
