@@ -3,9 +3,15 @@
 use App\Http\Controllers\CrearTorneoController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\LoginController;
+<<<<<<< HEAD
 use App\Http\Controllers\PerfilJugadorController;
 use App\Http\Controllers\Perfil2Controller;
 use App\Http\Controllers\PerfilController;
+=======
+use App\Http\Controllers\PerfilController;
+use App\Http\Controllers\PerfilJugadorController;
+use App\Http\Controllers\Perfil2Controller;
+>>>>>>> f54c841e05a34a9b416707ceabf70b6122008b72
 use App\Http\Controllers\RegistrarJugadorController;
 use App\Http\Controllers\RegistrarResultadoUnoController;
 use App\Http\Controllers\RegistrarResultadoDosController;
@@ -15,6 +21,10 @@ use App\Http\Controllers\EditarJugadorDosController;
 use App\Http\Controllers\EditarEquipoController;
 use App\Http\Controllers\EditarEquipoDosController;
 use App\Http\Controllers\SignupController;
+use App\Http\Controllers\EditarJugadorController;
+use App\Http\Controllers\EditarJugadorDosController;
+use App\Http\Controllers\EditarEquipoController;
+use App\Http\Controllers\EditarEquipoDosController;
 use Illuminate\Support\Facades\Route;
 
 Route::group(['namespace' => 'App\Http\Controllers'], function() {
