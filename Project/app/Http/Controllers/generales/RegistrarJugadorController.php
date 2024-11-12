@@ -9,13 +9,9 @@ use App\Models\Jugador;
 class RegistrarJugadorController extends Controller {
     public function index()
     {
-        // Obtener todos los jugadores (o filtrarlos según sea necesario)
-        //$jugadores = Jugador::all();  // Aquí puedes modificar la consulta según lo que necesites
-
-        // Pasar la variable jugadores a la vista
-        return view('modulos.registrarjugador.index');//, compact('jugadores'));  // Utiliza 'jugadores' como nombre de la variable
+        // Pasar la variable 'jugadores' a la vista
+        return view('modulos.registrarjugador.index');
     }
-
 
     public function store(Request $request)
     {
@@ -44,29 +40,19 @@ class RegistrarJugadorController extends Controller {
             'tarjetas_amarillas' => $request->tarjetas_amarillas,
             'faltas' => $request->faltas,
             'id_deporte' => $request->deporte_id,
-
         ]);
 
         return redirect()->route('registrarjugador.index')->with('success', 'Jugador registrado exitosamente');
     }
 
-    //Muestra un formulario para editar al usuario
-   // En RegistrarJugadorController.php
-
     public function edit($id)
     {
-        // Obtener al jugador por su ID
         $jugador = Jugador::findOrFail($id);
-
-        // Pasar la variable $jugador a la vista de edición
-        return view('jugadores.edit', compact('jugador')); // Pasamos 'jugador' en lugar de 'jugadores'
+        return view('jugadores.edit', compact('jugador'));
     }
 
-    // Actualiza un usuario específico
-    // Actualiza un jugador específico
     public function update(Request $request, $id)
     {
-        // Validación de los datos del formulario
         $request->validate([
             'nombre' => 'required',
             'apellido_paterno' => 'required',
@@ -80,10 +66,7 @@ class RegistrarJugadorController extends Controller {
             'faltas' => 'required|integer',
         ]);
 
-        // Buscar al jugador en la base de datos
         $jugador = Jugador::findOrFail($id);
-
-        // Actualizar los datos del jugador
         $jugador->update([
             'nombre' => $request->nombre,
             'apellido_paterno' => $request->apellido_paterno,
@@ -97,29 +80,28 @@ class RegistrarJugadorController extends Controller {
             'faltas' => $request->faltas,
         ]);
 
-        // Redirigir con un mensaje de éxito
         return redirect()->route('jugadores.index')->with('success', 'Jugador actualizado con éxito');
     }
 
-
-    // Cambiar el estado activo de un jugador a inactivo
     public function destroy($id)
     {
-        // Buscar al jugador en la base de datos
         $jugador = Jugador::findOrFail($id);
-
-        // Eliminar al jugador
         $jugador->delete();
-
-        // Redirigir con un mensaje de éxito
         return redirect()->route('jugadores.index')->with('success', 'Jugador eliminado con éxito');
     }
 
     public function create()
-{
-    return view('modulos.registrarjugador.index'); // Aquí debes tener la vista de creación
-}
+    {
+        return view('modulos.registrarjugador.index');
+    }
 
+    // Nueva función 'read' para listar jugadores
+    public function read()
+    {
+        // Obtener todos los jugadores de la base de datos
+        $jugadores = Jugador::all();
 
-
+        // Pasar la variable 'jugadores' a la vista
+        return view('modulos.editarjugador.index', compact('jugadores'));
+    }
 }

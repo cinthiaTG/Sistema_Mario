@@ -61,7 +61,7 @@ Route::group(['namespace' => 'App\Http\Controllers'], function() {
     });
 
     Route::group(['prefix' => 'modulos/editarjugador'], function(){
-        Route::get('/', [EditarJugadorController::class, 'index'])->name('editarjugador.index');
+        Route::get('/', [RegistrarJugadorController::class, 'read'])->name('editarjugador.index');
     });
 
     Route::group(['prefix' => 'modulos/editarjugadordos'], function(){

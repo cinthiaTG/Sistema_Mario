@@ -11,7 +11,6 @@
         <a href="{{ route('dashboard.index') }}">
             <img class="icon0" src="{{ asset('img/iB.png') }}" alt="more">
         </a>
-
         <img class="icon1" src="{{ asset('img/more.png') }}" alt="more">
         <img class="icon2" src="{{ asset('img/cup.png') }}" alt="cup">
         <img class="icon3" src="{{ asset('img/player.png') }}" alt="player">
@@ -27,8 +26,8 @@
                     <tr>
                         <th>ID</th>
                         <th>Nombre</th>
-                        <th>Imagen</th>
-                        <th>Jugadores</th>
+                        <th>Apellido Paterno</th>
+                        <th>Apellido Materno</th>
                         <th>Edad</th>
                         <th>Posición</th>
                         <th>ID_Deporte</th>
@@ -36,30 +35,34 @@
                         <th>Puntos</th>
                         <th>Asistencias</th>
                         <th>Tarjetas Amarillas</th>
+                        <th>Tarjetas Rojas</th>
                         <th>Faltas</th>
                         <th>Acciones</th>
                     </tr>
                 </thead>
                 <tbody>
+                    @foreach ($jugadores as $jugador)
                     <tr>
-                        <td>198</td>
-                        <td>Juan Daniel</td>
-                        <td>Guerrero</td>
-                        <td>Guerrero</td>
-                        <td>19</td>
-                        <td>Delantero</td>
-                        <td>288</td>
-                        <td>399</td>
-                        <td>15</td>
-                        <td>24</td>
-                        <td>2</td>
-                        <td>4</td>
-
-                        <td><a href="{{ route('editarjugadordos.index') }}"><button class="edit-button">Editar</button></a>
-                            <button class="quit-button">Eliminar</button>
+                        <td>{{ $jugador->nombre }}</td>
+                        <td>{{ $jugador->apellido_paterno }}</td>
+                        <td>{{ $jugador->apellido_materno }}</td>
+                        <td>{{ $jugador->edad }}</td>
+                        <td>{{ $jugador->posicion }}</td>
+                        <td>{{ $jugador->puntos }}</td>
+                        <td>{{ $jugador->asistencias }}</td>
+                        <td>{{ $jugador->tarjetas_amarillas }}</td>
+                        <td>{{ $jugador->tarjetas_rojas }}</td>
+                        <td>{{ $jugador->faltas }}</td>
+                        <td>
+                            <a href="{{ route('jugadores.edit', $jugador->id) }}"><button class="edit-button">Editar</button></a>
+                            <form action="{{ route('jugadores.destroy', $jugador->id) }}" method="POST" style="display:inline;">
+                                @csrf
+                                @method('DELETE')
+                                <button type="submit" class="quit-button">Eliminar</button>
+                            </form>
                         </td>
                     </tr>
-
+                    @endforeach
                 </tbody>
             </table>
         </div>
