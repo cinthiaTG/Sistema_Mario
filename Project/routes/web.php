@@ -8,6 +8,7 @@ use App\Http\Controllers\generales\PerfilController;
 use App\Http\Controllers\generales\RegistrarJugadorController;
 use App\Models\Rol;
 use App\Http\Controllers\generales\RegistrarEquipoController;
+use App\Http\Controllers\generales\RegistrarInstalacionController;
 
 /*
 |--------------------------------------------------------------------------
@@ -34,9 +35,6 @@ Route::put('/users/{id}', [UserController::class, 'update'])->name('users.update
 Route::delete('/users/{id}', [UserController::class, 'destroy'])->name('users.destroy');
 Route::post('/login', [UserController::class, 'authenticate'])->name('login.process');
 
-Route::get('/registrar-jugador', [RegistrarEquipoController::class, 'index'])->name('registrarequipo.index');
-Route::post('/registrar-jugador', [RegistrarEquipoController::class, 'store'])->name('registrarequipo.store');
-
 
 // Rutas para Jugadores
 Route::get('/jugadores', [RegistrarJugadorController::class, 'index'])->name('jugadores.index');  // Lista de jugadores
@@ -49,6 +47,9 @@ Route::delete('/jugadores/{id}', [RegistrarJugadorController::class, 'destroy'])
 
 Route::get('/registrar-jugador', [RegistrarJugadorController::class, 'index'])->name('registrarjugador.index');
 Route::post('/registrar-jugador', [RegistrarJugadorController::class, 'store'])->name('registrarjugador.store');
+
+Route::get('/registrar-instalacion', [RegistrarInstalacionController::class, 'index'])->name('registrarinstalacion.index');
+Route::post('/registrar-instalacion', [RegistrarInstalacionController::class, 'store'])->name('registrarinstalacion.store');
 
 
 
