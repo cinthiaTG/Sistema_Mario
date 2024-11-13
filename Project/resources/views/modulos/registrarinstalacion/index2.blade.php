@@ -8,7 +8,7 @@
 </head>
 <body>
     <div class="sidebar">
-        <a href="{{ route('editarinstalacion.index') }}">
+        <a href="{{ route('registrarinstalacion.read') }}">
             <img class="icon0" src="{{ asset('img/iB.png') }}" alt="more">
         </a>
         <img class="icon1" src="{{ asset('img/more.png') }}" alt="more">
@@ -19,7 +19,7 @@
 
     <div class="container">
         <!-- Formulario para editar el equipo -->
-    <form action="{{ route('registrarinstalacion.update', $equipo->id) }}" method="POST" enctype="multipart/form-data">
+    <form action="{{ route('registrarinstalacion.update', $instalacion->id) }}" method="POST" enctype="multipart/form-data">
         @csrf
         @method('PUT') <!-- Método PUT para actualización -->
 
@@ -35,6 +35,7 @@
 
         <button type="submit" class="save-button">Guardar Cambios</button>
     </form>
+
     </div>
 
 </body>

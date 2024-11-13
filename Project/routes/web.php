@@ -62,6 +62,8 @@ Route::get('/editar-instalacion', [RegistrarInstalacionController::class, 'index
 Route::post('/registrar-instalacion', [RegistrarInstalacionController::class, 'store'])->name('registrarinstalacion.store');
 Route::get('/editar-instalaciones', [RegistrarInstalacionController::class, 'edit'])->name('editarinstalaciones.index');
 Route::get('/registrar-instalacion-read', [RegistrarInstalacionController::class, 'read'])->name('registrarinstalacion.read');
+Route::put('/registrar-instalacion-update/{id}', [RegistrarInstalacionController::class, 'update'])->name('registrarinstalacion.update'); // Actualizar Equipo
+Route::get('/registrar-instalacion-update/{id}/edit', [RegistrarInstalacionController::class, 'edit'])->name('registrarinstalacion.edit'); // Formulario de edición  porque no se actualiza
 
 
 include(base_path('routes/routes_cat_s.php'));

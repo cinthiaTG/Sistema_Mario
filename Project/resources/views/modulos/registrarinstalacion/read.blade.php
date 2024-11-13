@@ -44,14 +44,14 @@
                         <td>{{ $jugador->tarjetas_amarillas }}</td>
                         <td>{{ $jugador->tarjetas_rojas }}</td>
                         <td>{{ $jugador->faltas }}</td> --}}
-                        {{-- <td>
-                            <a href="{{ route('instalaciones.edit', $instalacion->id) }}"><button class="edit-button">Editar</button></a>
-                            <form action="{{ route('instalaciones.destroy', $instalacion->id) }}" method="POST" style="display:inline;">
+                        <td>
+                            <a href="{{ route('registrarinstalacion.edit', $instalacion->id) }}"><button class="edit-button">Editar</button></a>
+                            {{-- <form action="{{ route('instalaciones.destroy', $instalacion->id) }}" method="POST" style="display:inline;">
                                 @csrf
                                 @method('DELETE')
                                 <button type="submit" class="quit-button">Eliminar</button>
-                            </form>
-                        </td> --}}
+                            </form> --}}
+                        </td>
                     </tr>
                     @endforeach
                 </tbody>

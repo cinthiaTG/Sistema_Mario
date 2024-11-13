@@ -19,21 +19,19 @@
     </div>
 
     <!-- Formulario para editar el equipo -->
-    <form action="{{ route('registrarinstalacion.update', $equipo->id) }}" method="POST" enctype="multipart/form-data">
+    <form action="{{ route('registrarinstalacion.update', $instalacion->id) }}" method="POST" enctype="multipart/form-data">
         @csrf
         @method('PUT') <!-- Método PUT para actualización -->
 
         <div class="section-title">
-            <label for="nombre">Nombre del Equipo</label>
-            <input type="text" name="nombre_equipo" class="form-control" value="{{ $equipo->nombre_equipo }}" required>
+            <label for="nombre">Nombre del instalacion nuevo</label>
+            <input type="text" name="nombre_instalacion" class="form-control" value="{{ $instalacion->nombre_instalacion }}" required>
+
         </div>
 
-        <div class="section-title">
-            <label for="escudo">Escudo del Equipo</label>
-            <input type="file" id="escudo" name="escudo" accept="image/*">
-        </div>
 
-        <button type="submit" class="save-button">Guardar Cambios</button>
+        <button type="submit" class="btn btn-primary">Actualizar</button>
     </form>
+
 </body>
 </html>

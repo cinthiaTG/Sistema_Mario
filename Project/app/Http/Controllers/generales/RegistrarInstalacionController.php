@@ -22,11 +22,27 @@ class RegistrarInstalacionController extends Controller
 
     }
 
+    public function update(Request $request, $id)
+    {
+        $request->validate([
+            'nombre_instalacion' => 'required',
+            // 'ubicacion' => 'required',
+        ]);
+
+        $instalacion = Instalacion::findOrFail($id);
+        $instalacion->update([
+            'nombre_instalacion' => $request->nombre_instalacion,
+            // 'ubicacion' => $request->ubicacion,
+        ]);
+
+        return redirect()->route('registrarinstalacion.read')->with('success', 'Instalacion actualizada con éxito');
+    }
+
 
     public function edit($id)
     {
-        $instalacion = instalacion::findOrFail($id);
-        return view('instalaciones.edit', compact('instalacion'));
+        $instalacion = Instalacion::findOrFail($id);
+        return view('modulos.registrarinstalacion.edit', compact('instalacion'));
     }
     // Leer y listar todos los equipos
     public function read()
