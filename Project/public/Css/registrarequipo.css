@@ -1,30 +1,20 @@
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-    font-family: 'Helvetica Neue', sans-serif;
 }
 
 body {
-    background-color: #f3f3f3;
+    font-family: Arial, sans-serif;
     display: flex;
     justify-content: center;
     align-items: center;
-}
-
-.container {
-    width: 500px;
-    padding: 20px;
-    background-color: #f7f0f0;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    margin-left: 100px;
+    background-color: #f3f3f3;
 }
 
 .sidebar {
     width: 60px;
     height: 100%;
-    background-color: black;
+    background-color: #000;
     position: fixed;
     left: 0;
     top: 0;
@@ -40,123 +30,107 @@ body {
     margin: 15px 0;
 }
 
+.icon0 {
+    width: 50px;
+    height: 50px;
+}
+
+.icon1 {
+    width: 55px;
+    height: 53px;
+}
+
+.icon2 {
+    width: 38px;
+    height: 44px;
+}
+
+.icon3, .icon4 {
+    width: 55px;
+    height: 53px;
+}
+
+.container {
+    margin-left: 100px;
+    width: 500px;
+    background-color: #f7f0f0;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
 .form-title {
     font-size: 24px;
     font-weight: bold;
     margin-bottom: 20px;
-    color: black;
+    color: #333;
 }
 
-.team-form {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    column-gap: 20px;
-    row-gap: 15px;
-}
-
-.team-form label {
-    font-size: 14px;
-    color: black;
+.player-form label {
     font-weight: bold;
+    font-size: 14px;
+    margin-bottom: 5px;
+    display: block;
+    color: #333;
 }
 
-.team-form input[type="text"],
-.team-form input[type="file"],
-.team-form input[type="number"] {
+.player-form input[type="text"],
+.player-form input[type="number"] {
     width: 100%;
     padding: 10px;
-    font-size: 14px;
+    margin-bottom: 15px;
     border: 1px solid #ccc;
     border-radius: 5px;
-}
-
-.field-section {
-    display: flex;
-    margin-top: 20px;
-    grid-column: span 2;
-}
-
-.field-image {
-    flex: 2;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #e0e0e0;
-    border: 1px solid #ccc;
-    border-radius: 10px;
-    padding: 20px;
-    height: 400px;
-    width: 300px;
-}
-
-.field-image img.field-placeholder {
-    max-width: 100%;
-    max-height: 100%;
-    border-radius: 10px;
-}
-
-.player-list {
-    flex: 1;
-    margin-left: 20px;
-    background-color: #ddd;
-    border: 1px solid #ccc;
-    border-radius: 10px;
-    padding: 15px;
+    font-size: 14px;
 }
 
 .section-title {
     font-size: 18px;
     font-weight: bold;
-    color: black;
+    margin-top: 20px;
     margin-bottom: 10px;
-}
-
-.add-player-button {
-    width: 100%;
-    padding: 10px;
-    font-size: 16px;
-    color: #fff;
-    background-color: #555;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    margin-bottom: 10px;
-}
-
-.add-player-button:hover {
-    background-color: #777;
-}
-
-.players {
-    list-style: none;
-}
-
-.players li {
-    margin-bottom: 10px;
-}
-
-.players input[type="text"] {
-    width: 100%;
-    padding: 8px;
-    font-size: 14px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+    color: #444;
 }
 
 .save-button {
-    grid-column: span 2;
     width: 100%;
     padding: 12px;
     font-size: 16px;
+    font-weight: bold;
     color: #fff;
     background-color: #333;
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    font-weight: bold;
-    text-transform: uppercase;
     margin-top: 20px;
+    text-transform: uppercase;
 }
+
+.img-label{
+    display: inline-block;
+    padding: 10px 20px;
+    width: 135px;
+    background-color: rgb(2, 175, 255);
+    cursor: pointer;
+    color: white;
+    border-radius: 5px;
+}
+
+.img-label:hover{
+    background-color: rgb(20, 121, 168);
+}
+
+.input-label{
+    display: inline-block;
+    padding: 10px 20px;
+    width: 180px;
+    background-color: gray;
+    cursor: pointer;
+    color: white;
+    border-radius: 5px;
+}
+
+
 
 .save-button:hover {
     background-color: #555;

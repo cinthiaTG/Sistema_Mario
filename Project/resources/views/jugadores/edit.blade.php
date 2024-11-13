@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Editar Jugador</title>
-    <link rel="stylesheet" href="{{ asset('Css/registrarjugadores.css') }}">
+    <link rel="stylesheet" href="{{ asset('Css/editarjugador2.css') }}">
 </head>
 <body>
     <div class="sidebar">
@@ -18,10 +18,15 @@
         <img class="icon3" src="{{ asset('img/player.png') }}" alt="player">
         <img class="icon4" src="{{ asset('img/search.png') }}" alt="search">
     </div>
+
     <div class="container">
         <h1>Editar Jugador</h1>
+        <br>
+        @if(session('success'))
+            <p>{{ session('success') }}</p>
+        @endif
 
-        <form action="{{ route('jugadores.update', $jugador->id) }}" method="POST">
+        <form class="player-form" action="{{ route('jugadores.update', $jugador->id) }}" method="POST">
             @csrf
             @method('PUT')
 
@@ -75,7 +80,7 @@
                 <input type="number" name="faltas" class="form-control" value="{{ $jugador->faltas }}" required>
             </div>
 
-            <button type="submit" class="btn btn-primary">Actualizar</button>
+            <button type="submit" class="actualizar">Actualizar</button>
             <a href="{{ route('editarjugador.index') }}" class="btn btn-secondary">Cancelar</a>
         </form>
     </div>

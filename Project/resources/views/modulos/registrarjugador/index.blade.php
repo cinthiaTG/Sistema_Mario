@@ -24,7 +24,7 @@
             <input type="text" name="nombre" required>
 
             <label>Apellido Paterno</label>
-            <input type="text" name="apellido_paterno" required>
+            <input type="text" name="apellido_paterno" required>    
 
             <label>Apellido Materno</label>
             <input type="text" name="apellido_materno" required>
@@ -32,13 +32,13 @@
             <label>Edad</label>
             <input type="number" name="edad" required>
 
-            <label class="input-label" for="Deporte">Deportes</label>
-                <select id="Deporte" name="deporte_id" class="input-box" required>
-                    <option value="1">Futbol Americano</option>
-                    <option value="2">Futbol Soccer</option>
-                    <option value="3">Volleyball</option>
-                    <option value="4">Basketball</option>
-                </select>
+            <label for="deporte_id">Deportes</label>
+            <select class="input-label" id="deporte_id" name="deporte_id" required>
+                <option value="1">Futbol Americano</option>
+                <option value="2">Futbol Soccer</option>
+                <option value="3">Volleyball</option>
+                <option value="4">Basketball</option>
+            </select>
 
             <label>Posicion</label>
             <input type="text" name="posicion" required>

@@ -18,22 +18,30 @@
         <img class="icon4" src="{{ asset('img/search.png') }}" alt="search">
     </div>
 
-    <!-- Formulario para editar el equipo -->
-    <form action="{{ route('equipos.update', $equipo->id) }}" method="POST" enctype="multipart/form-data">
-        @csrf
-        @method('PUT') <!-- Método PUT para actualización -->
+    <div class="container">
+        <h1>Editar Equipo</h1>
+        <br>
+        @if(session('success'))
+            <p>{{ session('success') }}</p>
+        @endif
 
-        <div class="section-title">
-            <label for="nombre">Nombre del Equipo</label>
-            <input type="text" name="nombre_equipo" class="form-control" value="{{ $equipo->nombre_equipo }}" required>
-        </div>
+        <!-- Formulario para editar el equipo -->
+        <form class="player-form" action="{{ route('equipos.update', $equipo->id) }}" method="POST" enctype="multipart/form-data">
+            @csrf
+            @method('PUT') <!-- Método PUT para actualización -->
 
-        <div class="section-title">
+            <div class="section-title">
+                <label for="nombre">Nombre del Equipo</label>
+                <input type="text" name="nombre_equipo" class="form-control" value="{{ $equipo->nombre_equipo }}" required>
+            </div>
+
             <label for="escudo">Escudo del Equipo</label>
-            <input type="file" id="escudo" name="escudo" accept="image/*">
-        </div>
+            <input type="file" id="escudo" name="escudo" accept="image/*" required style="display: none;">
+            <label for="escudo" class="img-label">Seleccionar imagen</label>
+            <br>
 
-        <button type="submit" class="save-button">Guardar Cambios</button>
-    </form>
+            <button type="submit" class="save-button">Guardar Cambios</button>
+        </form>
+    </div>
 </body>
 </html>
