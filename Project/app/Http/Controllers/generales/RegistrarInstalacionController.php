@@ -31,8 +31,8 @@ class RegistrarInstalacionController extends Controller
     // Leer y listar todos los equipos
     public function read()
     {
-        $instalacion = instalacion::all();
-        return view('modulos.registrarinstalacion.read', compact('instalacion'));
+        $instalaciones = instalacion::all();
+        return view('modulos.registrarinstalacion.read', compact('instalaciones'));
     }
 
     public function store(Request $request)
