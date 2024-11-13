@@ -9,7 +9,7 @@
 <body>
     <br>
     <div class="sidebar">
-        <a href="{{ route('editarinstalacion.index') }}">
+        <a href="{{ route('registrarinstalacion.read') }}">
             <img class="icon0" src="{{ asset('img/iB.png') }}" alt="more">
         </a>
         <img class="icon1" src="{{ asset('img/more.png') }}" alt="more">
@@ -24,8 +24,14 @@
         @method('PUT') <!-- Método PUT para actualización -->
 
         <div class="section-title">
-            <label for="nombre">Nombre del instalacion nuevo</label>
+            <label for="nombre">Nombre de instalacion</label>
             <input type="text" name="nombre_instalacion" class="form-control" value="{{ $instalacion->nombre_instalacion }}" required>
+
+        </div>
+
+        <div class="section-title">
+            <label for="nombre">Ubicacion</label>
+            <input type="text" name="ubicacion" class="form-control" value="{{ $instalacion->ubicacion }}" required>
 
         </div>
 

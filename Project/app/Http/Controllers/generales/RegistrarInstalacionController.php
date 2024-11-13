@@ -26,13 +26,13 @@ class RegistrarInstalacionController extends Controller
     {
         $request->validate([
             'nombre_instalacion' => 'required',
-            // 'ubicacion' => 'required',
+            'ubicacion' => 'required',
         ]);
 
         $instalacion = Instalacion::findOrFail($id);
         $instalacion->update([
             'nombre_instalacion' => $request->nombre_instalacion,
-            // 'ubicacion' => $request->ubicacion,
+            'ubicacion' => $request->ubicacion,
         ]);
 
         return redirect()->route('registrarinstalacion.read')->with('success', 'Instalacion actualizada con éxito');
@@ -69,5 +69,12 @@ class RegistrarInstalacionController extends Controller
         ]);
 
         return redirect()->route('registrarinstalacion.index')->with('success', 'Jugador registrado exitosamente');
+    }
+
+    public function destroy($id)
+    {
+        $instalacion = instalacion::findOrFail($id);
+        $instalacion->delete();
+        return redirect()->route('registrarinstalacion.read')->with('success', 'Jugador eliminado con éxito');
     }
 }

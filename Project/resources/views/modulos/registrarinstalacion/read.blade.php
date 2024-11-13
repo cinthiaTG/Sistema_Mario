@@ -46,11 +46,11 @@
                         <td>{{ $jugador->faltas }}</td> --}}
                         <td>
                             <a href="{{ route('registrarinstalacion.edit', $instalacion->id) }}"><button class="edit-button">Editar</button></a>
-                            {{-- <form action="{{ route('instalaciones.destroy', $instalacion->id) }}" method="POST" style="display:inline;">
+                             <form action="{{ route('registrarinstalacion.destroy', $instalacion->id) }}" method="POST" style="display:inline;">
                                 @csrf
                                 @method('DELETE')
                                 <button type="submit" class="quit-button">Eliminar</button>
-                            </form> --}}
+                            </form>
                         </td>
                     </tr>
                     @endforeach
