@@ -11,11 +11,11 @@ use App\Http\Controllers\RegistrarResultadoDosController;
 use App\Http\Controllers\generales\RegistrarEquipoController;
 use App\Http\Controllers\SignupController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\generales\RegistrarInstalacionController;
 
 use App\Http\Controllers\PerfilJugadorController;
 use App\Http\Controllers\EditarJugadorController;
 use App\Http\Controllers\EditarJugadorDosController;
-use App\Http\Controllers\EditarEquipoController;
 use App\Http\Controllers\EditarEquipoDosController;
 
 use App\Http\Controllers\RegistrarCanchaController;
@@ -76,20 +76,15 @@ Route::group(['namespace' => 'App\Http\Controllers'], function() {
     Route::post('/registrar-equipo', [RegistrarEquipoController::class, 'store'])->name('registrarequipo.store');
 
     Route::group(['prefix' => 'modulos/editarequipo'], function(){
-        Route::get('/', [EditarEquipoController::class, 'index'])->name('editarequipo.index');
+        Route::get('/', [RegistrarEquipoController::class, 'read'])->name('editarequipo.index');
     });
 
     Route::group(['prefix' => 'modulos/editarequipodos'], function(){
         Route::get('/', [EditarEquipoDosController::class, 'index'])->name('editarequipodos.index');
     });
 
-    Route::group(['prefix' => 'modulos/registrarcancha'], function(){
-        Route::get('/', [RegistrarCanchaController::class, 'index'])->name('registrarcancha.index');
-    });
 
-    Route::group(['prefix' => 'modulos/editarcancha'], function(){
-        Route::get('/', [EditarCanchaController::class, 'index'])->name('editarcancha.index');
-    });
+
 
     Route::group(['prefix' => 'modulos/editarcanchados'], function(){
         Route::get('/', [EditarCanchaDosController::class, 'index'])->name('editarcanchados.index');

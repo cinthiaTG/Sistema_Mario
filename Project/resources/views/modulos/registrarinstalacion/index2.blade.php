@@ -4,12 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Interfaz de Administrador</title>
-    <link rel="stylesheet" href="{{ asset('css/editarequipodos.css') }}">
+    <link rel="stylesheet" href="{{ asset('Css/editarcanchados.css') }}">
 </head>
 <body>
-    <br>
     <div class="sidebar">
-        <a href="{{ route('editarequipo.index') }}">
+        <a href="{{ route('editarinstalacion.index') }}">
             <img class="icon0" src="{{ asset('img/iB.png') }}" alt="more">
         </a>
         <img class="icon1" src="{{ asset('img/more.png') }}" alt="more">
@@ -18,13 +17,14 @@
         <img class="icon4" src="{{ asset('img/search.png') }}" alt="search">
     </div>
 
-    <!-- Formulario para editar el equipo -->
-    <form action="{{ route('equipos.update', $equipo->id) }}" method="POST" enctype="multipart/form-data">
+    <div class="container">
+        <!-- Formulario para editar el equipo -->
+    <form action="{{ route('registrarinstalacion.update', $equipo->id) }}" method="POST" enctype="multipart/form-data">
         @csrf
         @method('PUT') <!-- Método PUT para actualización -->
 
         <div class="section-title">
-            <label for="nombre">Nombre del Equipo</label>
+            <label for="nombre">Nombre de instalacion</label>
             <input type="text" name="nombre_equipo" class="form-control" value="{{ $equipo->nombre_equipo }}" required>
         </div>
 
@@ -35,5 +35,7 @@
 
         <button type="submit" class="save-button">Guardar Cambios</button>
     </form>
+    </div>
+
 </body>
 </html>

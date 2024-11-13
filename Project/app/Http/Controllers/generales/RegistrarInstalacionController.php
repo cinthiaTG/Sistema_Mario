@@ -17,6 +17,23 @@ class RegistrarInstalacionController extends Controller
         return view('modulos.registrarinstalacion.index');//, compact('jugadores'));  // Utiliza 'jugadores' como nombre de la variable
     }
 
+    public function index2(){
+        return view('modulos.registrarinstalacion.index2');//, compact('jugadores'));  // Utiliza 'jugadores' como nombre de la variable
+
+    }
+
+
+    public function edit($id)
+    {
+        $instalacion = instalacion::findOrFail($id);
+        return view('instalaciones.edit', compact('instalacion'));
+    }
+    // Leer y listar todos los equipos
+    public function read()
+    {
+        $instalacion = instalacion::all();
+        return view('modulos.registrarinstalacion.read', compact('instalacion'));
+    }
 
     public function store(Request $request)
     {

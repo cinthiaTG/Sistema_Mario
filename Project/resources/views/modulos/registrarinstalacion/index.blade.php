@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Interfaz de Administrador</title>
-    <link rel="stylesheet" href="{{ asset('Css/registrarequipo.css') }}">
+    <link rel="stylesheet" href="{{ asset('Css/registrarcancha.css') }}">
 </head>
 <body>
     <div class="sidebar">
@@ -18,29 +18,27 @@
     </div>
 
     <div class="container">
-        <h1 class="form-title">Registrar Instalacion</h1>
-
-        <form action="{{ route('registrarinstalacion.store') }}" method="POST">
+        <h1 class="form-title">Registrar Cancha</h1>
+        <br>
+        <form action="{{ route('registrarinstalacion.store') }}" method="POST" enctype="multipart/form-data">
             @csrf
 
-            <label class="input-label" for="nombre_instalacion">Nombre Instalacion</label>
-            <input type="text" id="nombre_instalacion" name="nombre_instalacion" class="input-box" required>
+            <label for="name">Nombre Instalacion</label>
+            <input id="name" type="text" name = 'nombre_instalacion' required>
 
-            <label class="input-label" for="ubicacion"> Ubicacion </label>
-            <input type="ubicacion" id="ubicacion" name="ubicacion" class="input-box" required>
+            <label for="team-name">Ubicacion</label>
+            <input id="team-name" type="text" name = 'ubicacion'equired>
 
-            <label class="input-label" for="Deporte">Deportes</label>
-                <select id="Deporte" name="deporte_id" class="input-box" required>
-                    <option value="1">Futbol Americano</option>
-                    <option value="2">Futbol Soccer</option>
-                    <option value="3">Volleyball</option>
-                    <option value="4">Basketball</option>
-                </select>
+            <label for="sport">Deporte</label>
+            <select name="deporte" name="deporte_id"id="sport-name">
+                <option value="1">Fútbol</option>
+                <option value="2">Fútbol Americano</option>
+                <option value="3">Voleibol</option>
+                <option value="4">Basquetbol</option>
+            </select>
 
-
-            <button type="submit" class="btn btn-primary btn-block login-button">Register</button>
+            <button type="submit" class="save-button">Guardar</button>
         </form>
-
     </div>
 </body>
 </html>

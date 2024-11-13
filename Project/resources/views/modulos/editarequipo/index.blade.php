@@ -11,7 +11,6 @@
         <a href="{{ route('dashboard.index') }}">
             <img class="icon0" src="{{ asset('img/iB.png') }}" alt="more">
         </a>
-
         <img class="icon1" src="{{ asset('img/more.png') }}" alt="more">
         <img class="icon2" src="{{ asset('img/cup.png') }}" alt="cup">
         <img class="icon3" src="{{ asset('img/player.png') }}" alt="player">
@@ -25,24 +24,30 @@
             <table class="results-table">
                 <thead>
                     <tr>
-                        <th>ID</th>
-                        <th>Nombre</th>
+                        <th>Nombre del Equipo</th>
                         <th>Logo</th>
-                        <th>Jugadores</th>
                         <th>Acciones</th>
                     </tr>
                 </thead>
                 <tbody>
+                    @foreach ($equipos as $equipo)
                     <tr>
-                        <td>198</td>
-                        <td>Murcielagos</td>
-                        <td>Img</td>
-                        <td>12</td>
-                        <td><a href="{{ route('editarequipodos.index') }}"><button class="edit-button">Editar</button></a>
-                            <button class="quit-button">Eliminar</button>
+                        <td>{{ $equipo->nombre }}</td>
+                        <td>
+                            <img src="{{ asset('storage/logos/' . $equipo->logo) }}" alt="Logo del equipo" class="team-logo">
+                        </td>
+                        <td>
+                            <a href="{{ route('equipos.edit', $equipo->id) }}">
+                                <button class="edit-button">Editar</button>
+                            </a>
+                            <form action="{{ route('equipos.destroy', $equipo->id) }}" method="POST" style="display:inline;">
+                                @csrf
+                                @method('DELETE')
+                                <button type="submit" class="quit-button">Eliminar</button>
+                            </form>
                         </td>
                     </tr>
-
+                    @endforeach
                 </tbody>
             </table>
         </div>

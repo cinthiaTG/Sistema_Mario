@@ -9,6 +9,7 @@
 </head>
 <body>
 
+
 <div class="container">
     <h1>Registrar Nuevo Jugador</h1>
 

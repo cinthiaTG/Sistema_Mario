@@ -63,11 +63,11 @@
 
 
         <div class="card-container3">
-            <a href="{{ route('registrarcancha.index')}}" class="card">
+            <a href="{{ route('registrarinstalacion.index')}}" class="card">
                 <div class="card-label6">Registrar Cancha</div>
             </a>
 
-            <a href="{{ route('editarcancha.index')}}" class="card">
+            <a href="{{ route('registrarinstalacion.read')}}" class="card">
                 <div class="card-label7">Editar Cancha</div>
             </a>
 

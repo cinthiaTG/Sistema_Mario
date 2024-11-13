@@ -9,6 +9,15 @@
     <link rel="stylesheet" href="{{ asset('Css/registrarjugadores.css') }}">
 </head>
 <body>
+    <div class="sidebar">
+        <a href="{{ route('dashboard.index') }}">
+            <img class="icon0" src="{{ asset('img/iB.png') }}" alt="more">
+        </a>
+        <img class="icon1" src="{{ asset('img/more.png') }}" alt="more">
+        <img class="icon2" src="{{ asset('img/cup.png') }}" alt="cup">
+        <img class="icon3" src="{{ asset('img/player.png') }}" alt="player">
+        <img class="icon4" src="{{ asset('img/search.png') }}" alt="search">
+    </div>
     <div class="container">
         <h1>Editar Jugador</h1>
 
@@ -67,7 +76,7 @@
             </div>
 
             <button type="submit" class="btn btn-primary">Actualizar</button>
-            <a href="{{ route('jugadores.index') }}" class="btn btn-secondary">Cancelar</a>
+            <a href="{{ route('editarjugador.index') }}" class="btn btn-secondary">Cancelar</a>
         </form>
     </div>
 </body>
