@@ -21,7 +21,7 @@ use App\Http\Controllers\EditarCanchaDosController;
 use Illuminate\Support\Facades\Route;
 
 Route::group(['namespace' => 'App\Http\Controllers'], function() {
-   
+
     // Route::group(['prefix' => 'modulos/login'], function() {
     //     Route::get('/', [LoginController::class, 'index'])->name('login.index');
     // });
@@ -48,6 +48,8 @@ Route::group(['namespace' => 'App\Http\Controllers'], function() {
 
     Route::group(['prefix' => 'modulos/registarequipo'], function(){
         Route::get('/', [RegistrarEquipoController::class, 'index'])->name('registrarequipo.index');
+        Route::get('/prueba', [RegistrarEquipoController::class, 'read'])->name('registrarequipo.read');
+        Route::get('/prueba2', [RegistrarEquipoController::class, 'store'])->name('registrarequipo.store');
     });
 
     Route::group(['prefix' => 'modulos/registrarresultadouno'], function(){
@@ -70,9 +72,7 @@ Route::group(['namespace' => 'App\Http\Controllers'], function() {
         Route::get('/', [EditarJugadorDosController::class, 'index'])->name('editarjugadordos.index');
     });
 
-    Route::group(['prefix' => 'modulos/editarequipo'], function(){
-        Route::get('/', [EditarEquipoController::class, 'index'])->name('editarequipo.index');
-    });
+
 
     Route::group(['prefix' => 'modulos/editarequipodos'], function(){
         Route::get('/', [EditarEquipoDosController::class, 'index'])->name('editarequipodos.index');

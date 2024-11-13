@@ -9,4 +9,5 @@ class EditarEquipoDosController extends Controller{
     public function index(){
         return view("modulos.editarequipodos.index");
     }
+
 }
