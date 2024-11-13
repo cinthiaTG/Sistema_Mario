@@ -61,7 +61,7 @@ Route::get('/registrar-instalacion', [RegistrarInstalacionController::class, 'in
 Route::get('/editar-instalacion', [RegistrarInstalacionController::class, 'index2'])->name('editarinstalacion.index');
 Route::post('/registrar-instalacion', [RegistrarInstalacionController::class, 'store'])->name('registrarinstalacion.store');
 Route::get('/editar-instalaciones', [RegistrarInstalacionController::class, 'edit'])->name('editarinstalaciones.index');
-Route::post('/registrar-instalacion-read', [RegistrarInstalacionController::class, 'read'])->name('registrarinstalacion.read');
+Route::get('/registrar-instalacion-read', [RegistrarInstalacionController::class, 'read'])->name('registrarinstalacion.read');
 
 
 include(base_path('routes/routes_cat_s.php'));
