@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Interfaz de Administrador</title>
-    <link rel="stylesheet" href="{{ asset('css/editarequipodos.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/editarcanchados.css') }}">
 </head>
 <body>
     <br>
@@ -18,26 +18,32 @@
         <img class="icon4" src="{{ asset('img/search.png') }}" alt="search">
     </div>
 
-    <!-- Formulario para editar el equipo -->
-    <form action="{{ route('registrarinstalacion.update', $instalacion->id) }}" method="POST" enctype="multipart/form-data">
-        @csrf
-        @method('PUT') <!-- Método PUT para actualización -->
+    <div class="container">
+        <h1>Editar Cancha</h1>
+        <br>
+        @if(session('success'))
+            <p>{{ session('success') }}</p>
+        @endif
 
-        <div class="section-title">
-            <label for="nombre">Nombre de instalacion</label>
-            <input type="text" name="nombre_instalacion" class="form-control" value="{{ $instalacion->nombre_instalacion }}" required>
+        <!-- Formulario para editar el equipo -->
+        <form class="player-form" action="{{ route('registrarinstalacion.update', $instalacion->id) }}" method="POST" enctype="multipart/form-data">
+           @csrf
+          @method('PUT') <!-- Método PUT para actualización -->
 
-        </div>
+          <div class="section-title">
+                <label for="nombre">Nombre de instalacion</label>
+                <input type="text" name="nombre_instalacion" class="form-control" value="{{ $instalacion->nombre_instalacion }}" required>
+         </div>
 
-        <div class="section-title">
-            <label for="nombre">Ubicacion</label>
-            <input type="text" name="ubicacion" class="form-control" value="{{ $instalacion->ubicacion }}" required>
+            <div class="section-title">
+                <label for="nombre">Ubicacion</label>
+                <input type="text" name="ubicacion" class="form-control" value="{{ $instalacion->ubicacion }}" required>
+            </div>
 
-        </div>
 
-
-        <button type="submit" class="btn btn-primary">Actualizar</button>
-    </form>
+            <button type="submit" class="actualizar">Actualizar</button>
+        </form>
+    </div>    
 
 </body>
 </html>

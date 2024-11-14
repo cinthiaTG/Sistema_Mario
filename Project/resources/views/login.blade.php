@@ -154,7 +154,7 @@ body {
             {{-- aqui tambien te manda a una ruta usando php directa --}}
     </div>
 
-        <<form action="{{ route('login.process') }}" method="POST">
+        <form action="{{ route('login.process') }}" method="POST">
             @csrf
             <!-- Campo de correo electrónico -->
             <div class="form-group">

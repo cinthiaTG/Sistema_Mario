@@ -18,9 +18,13 @@
     </div>
 
     <div class="container">
-        <h1 class="form-title">Registrar Cancha</h1>
+        <h1>Registrar Equipo</h1>
         <br>
-        <form action="{{ route('registrarinstalacion.store') }}" method="POST" enctype="multipart/form-data">
+        @if(session('success'))
+            <p>{{ session('success') }}</p>
+        @endif
+        
+        <form class="player-form" action="{{ route('registrarinstalacion.store') }}" method="POST" enctype="multipart/form-data">
             @csrf
 
             <label for="name">Nombre Instalacion</label>
@@ -29,12 +33,12 @@
             <label for="team-name">Ubicacion</label>
             <input id="team-name" type="text" name = 'ubicacion'equired>
 
-            <label for="sport">Deporte</label>
-            <select name="deporte" name="deporte_id"id="sport-name">
-                <option value="1">Fútbol</option>
-                <option value="2">Fútbol Americano</option>
-                <option value="3">Voleibol</option>
-                <option value="4">Basquetbol</option>
+            <label for="deporte_id">Deporte</label>
+            <select class="input-label" id="deporte_id" name="deporte_id" required>
+                <option value="1">Futbol Americano</option>
+                <option value="2">Futbol Soccer</option>
+                <option value="3">Volleyball</option>
+                <option value="4">Basketball</option>
             </select>
 
             <button type="submit" class="save-button">Guardar</button>

@@ -64,11 +64,11 @@
 
         <div class="card-container3">
             <a href="{{ route('registrarinstalacion.index')}}" class="card">
-                <div class="card-label6">Registrar Cancha</div>
+                <div class="card-label6">Registrar Instalacion</div>
             </a>
 
             <a href="{{ route('registrarinstalacion.read')}}" class="card">
-                <div class="card-label7">Editar Cancha</div>
+                <div class="card-label7">Editar Instalacion</div>
             </a>
 
             <a href="#" class="card">

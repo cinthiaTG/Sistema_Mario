@@ -18,13 +18,13 @@
     </div>
 
     <div class="container">
-        <h1 class="form-title">Editar Jugador</h1>
+        <h1 class="form-title">Editar Instalacion</h1>
         <div class="results-section">
             <br>
             <table class="results-table">
                 <thead>
                     <tr>
-                        <th>Nombre</th>
+                        <th>Nombre de la Instalacion</th>
                         <th>Ubicacion</th>
                         {{-- <th>Puntos</th>
                         <th>Asistencias</th>

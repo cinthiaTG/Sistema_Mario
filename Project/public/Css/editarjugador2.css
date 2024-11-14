@@ -281,3 +281,17 @@ body {
     background: #53AA51;
     border-radius: 50%;
 }
+
+.actualizar{
+    padding: 5px 13px;
+    border-radius: 8px;
+    background-color: black;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.actualizar:hover{
+    background-color: rgb(2, 175, 255);
+}

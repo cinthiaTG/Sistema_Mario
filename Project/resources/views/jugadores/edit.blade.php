@@ -10,7 +10,7 @@
 </head>
 <body>
     <div class="sidebar">
-        <a href="{{ route('dashboard.index') }}">
+        <a href="{{ route('editarjugador.index') }}">
             <img class="icon0" src="{{ asset('img/iB.png') }}" alt="more">
         </a>
         <img class="icon1" src="{{ asset('img/more.png') }}" alt="more">
