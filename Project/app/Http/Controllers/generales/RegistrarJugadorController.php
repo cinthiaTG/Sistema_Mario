@@ -79,15 +79,15 @@ class RegistrarJugadorController extends Controller {
             'tarjetas_rojas' => $request->tarjetas_rojas,
             'faltas' => $request->faltas,
         ]);
-
-        return redirect()->route('jugadores.index')->with('success', 'Jugador actualizado con éxito');
+            //aqui
+        return redirect()->route('editarjugador.index')->with('success', 'Jugador actualizado con éxito');
     }
 
     public function destroy($id)
     {
         $jugador = Jugador::findOrFail($id);
         $jugador->delete();
-        return redirect()->route('jugadores.index')->with('success', 'Jugador eliminado con éxito');
+        return redirect()->route('editarjugador.index')->with('success', 'Jugador eliminado con éxito');
     }
 
     public function create()

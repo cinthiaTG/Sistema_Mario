@@ -18,7 +18,7 @@
     </div>
 
     <div class="container">
-        <h1>Registrar Equipo</h1>
+        <h1>Registrar Instalacion</h1>
         <br>
         @if(session('success'))
             <p>{{ session('success') }}</p>

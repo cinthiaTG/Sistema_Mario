@@ -20,7 +20,7 @@
         <div class="form-title">Registrar Jugador</div>
         <form class="player-form" action="{{ route('registrarjugador.store') }}" method="POST">
             @csrf
-            <label>Nombre Completo</label>
+            <label>Nombre(s)</label>
             <input type="text" name="nombre" required>
 
             <label>Apellido Paterno</label>
