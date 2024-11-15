@@ -5,11 +5,12 @@ namespace App\Http\Controllers\generales;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Jugador;
+use App\Models\Equipo; // Agrega esta línea para importar el modelo Equipo
 
 class RegistrarJugadorController extends Controller {
+
     public function index()
     {
-        // Pasar la variable 'jugadores' a la vista
         return view('modulos.registrarjugador.index');
     }
 
@@ -20,6 +21,7 @@ class RegistrarJugadorController extends Controller {
             'apellido_paterno' => 'required|string|max:255',
             'apellido_materno' => 'required|string|max:255',
             'edad' => 'required|integer',
+            'equipo_id' => 'required|exists:equipos,id',  // Cambié id_equipo a equipo_id
             'posicion' => 'required|string|max:255',
             'puntos' => 'required|integer',
             'asistencias' => 'required|integer',
@@ -33,17 +35,19 @@ class RegistrarJugadorController extends Controller {
             'apellido_paterno' => $request->apellido_paterno,
             'apellido_materno' => $request->apellido_materno,
             'edad' => $request->edad,
+            'id_equipo' => $request->equipo_id,
             'posicion' => $request->posicion,
             'puntos' => $request->puntos,
             'asistencias' => $request->asistencias,
             'tarjetas_rojas' => $request->tarjetas_rojas,
             'tarjetas_amarillas' => $request->tarjetas_amarillas,
             'faltas' => $request->faltas,
-            'id_deporte' => $request->deporte_id,
+            'id_deporte' => $request->id_deporte, // Asegúrate de que el campo id_deporte existe
         ]);
 
         return redirect()->route('registrarjugador.index')->with('success', 'Jugador registrado exitosamente');
     }
+
 
     public function edit($id)
     {
@@ -79,7 +83,7 @@ class RegistrarJugadorController extends Controller {
             'tarjetas_rojas' => $request->tarjetas_rojas,
             'faltas' => $request->faltas,
         ]);
-            //aqui
+
         return redirect()->route('editarjugador.index')->with('success', 'Jugador actualizado con éxito');
     }
 
@@ -92,16 +96,12 @@ class RegistrarJugadorController extends Controller {
 
     public function create()
     {
-        return view('modulos.registrarjugador.index');
+        $equipos = Equipo::all();
+        return view('modulos.registrarjugador.index', ['equipos' => $equipos]);
     }
 
-    // Nueva función 'read' para listar jugadores
     public function read()
     {
-        // Obtener todos los jugadores de la base de datos
-        $jugadores = Jugador::all();
-
-        // Pasar la variable 'jugadores' a la vista
         return view('modulos.editarjugador.index', compact('jugadores'));
     }
 }

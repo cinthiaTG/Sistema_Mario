@@ -31,6 +31,13 @@
             <label for="edad">Edad:</label>
             <input type="number" id="edad" name="edad" class="form-control" required>
         </div>
+        <label for="equipo_id">Equipo</label>
+        <select class="input-label" id="equipo_id" name="equipo_id" required>
+            @foreach($equipos as $equipo)
+                <option value="{{ $equipo->id }}">{{ $equipo->nombre }}</option>
+            @endforeach
+        </select>
+
         <div class="form-group">
             <label for="posicion">Posición:</label>
             <input type="text" id="posicion" name="posicion" class="form-control" required>

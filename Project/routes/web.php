@@ -45,8 +45,10 @@ Route::get('/jugadores/{id}/edit', [RegistrarJugadorController::class, 'edit'])-
 Route::put('/jugadores/{id}', [RegistrarJugadorController::class, 'update'])->name('jugadores.update'); // Actualizar jugador
 Route::delete('/jugadores/{id}', [RegistrarJugadorController::class, 'destroy'])->name('jugadores.destroy'); // Desactivar jugador
 
-Route::get('/registrar-jugador', [RegistrarJugadorController::class, 'index'])->name('registrarjugador.index');
-Route::post('/registrar-jugador', [RegistrarJugadorController::class, 'store'])->name('registrarjugador.store');
+Route::get('/registrarjugador', [RegistrarJugadorController::class, 'index'])->name('registrarjugador.index');
+Route::get('/registrarjugador', [RegistrarJugadorController::class, 'create'])->name('registrarjugador.create');
+Route::post('/registrarjugador', [RegistrarJugadorController::class, 'store'])->name('registrarjugador.store');
+
 
 Route::get('/equipos', [RegistrarEquipoController::class, 'index'])->name('equipos.index');  // Lista de equipos
 Route::get('/equipos/create', [RegistrarEquipoController::class, 'create'])->name('equipos.create'); // Formulario para crear Equipo
