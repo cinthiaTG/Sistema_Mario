@@ -102,6 +102,7 @@ class RegistrarJugadorController extends Controller {
 
     public function read()
     {
+        $jugadores = Jugador::with('equipo')->get();
         return view('modulos.editarjugador.index', compact('jugadores'));
     }
 }
