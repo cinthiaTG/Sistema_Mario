@@ -71,7 +71,7 @@
                 <div class="card-label7">Editar Instalacion</div>
             </a>
 
-            <a href="#" class="card">
+            <a href="{{ route('historialtorneo.index')}}" class="card">
                 <div class="card-label8 ">Consultar Historial &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; de Torneos</div>
             </a>
         </div>

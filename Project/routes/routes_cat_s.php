@@ -12,6 +12,7 @@ use App\Http\Controllers\generales\RegistrarEquipoController;
 use App\Http\Controllers\SignupController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\generales\RegistrarInstalacionController;
+use App\Http\Controllers\HistorialTorneoController;
 
 use App\Http\Controllers\PerfilJugadorController;
 use App\Http\Controllers\EditarJugadorController;
@@ -83,10 +84,11 @@ Route::group(['namespace' => 'App\Http\Controllers'], function() {
         Route::get('/', [EditarEquipoDosController::class, 'index'])->name('editarequipodos.index');
     });
 
-
-
-
     Route::group(['prefix' => 'modulos/editarcanchados'], function(){
         Route::get('/', [EditarCanchaDosController::class, 'index'])->name('editarcanchados.index');
+    });
+
+    Route::group(['prefix' => 'modulos/historialtorneo'], function(){
+        Route::get('/', [HistorialTorneoController::class, 'index'])->name('historialtorneo.index');
     });
 });
