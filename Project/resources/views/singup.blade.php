@@ -40,7 +40,9 @@
                     <a href="#" class="register-link">términos y condiciones</a>.
                 </div>
 
-                <button type="submit" class="btn btn-primary btn-block login-button">Register</button>
+                <button type="submit" class="btn-primary">Guardar</button>
+                <button type="submit" class="btn-secondary">Cancelar</button>
+                <a href="#" class="btn-secondary">Cancelar</a>
             </form>
         </div>
     </div>

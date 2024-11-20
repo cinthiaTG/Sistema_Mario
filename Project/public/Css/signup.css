@@ -73,12 +73,13 @@ body {
     color: #00B5FF;
     cursor: pointer;
     font-weight: 500;
+    padding: 3.5px;
 }
 
-.login-button {
-    width: 230px;
-    height: 35px;
-    margin-left: 60px;
+.btn-primary {
+    width: 140px;
+    height: 30px;
+    margin-left: 6px;
     background: #E03131;
     border: 1px #E03131 solid;
     display: flex;
@@ -90,4 +91,39 @@ body {
     font-family: Inter, sans-serif;
     font-weight: 700;
     margin-top: 20px;
+}
+
+.btn-primary {
+    width: 140px;
+    height: 30px;
+    margin-left: 25px;
+    background: #E03131;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    color: white;
+    font-size: 15px;
+    font-family: Inter, sans-serif;
+    font-weight: 700;
+    margin-top: 20px;
+}
+
+.btn-secondary {
+    width: 140px;
+    height: 30px;
+    margin-left: 175px;
+    text-decoration: none;
+    background: gray;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    color: white;
+    font-size: 15px;
+    font-family: Inter, sans-serif;
+    font-weight: 700;
+    margin-top: -30px;
 }

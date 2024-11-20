@@ -13,7 +13,7 @@
         <img class="icon1" src="{{ asset('img/more.png') }}" alt="more">
         <img class="icon2" src="{{ asset('img/cup.png') }}" alt="cup">
         <img class="icon3" src="{{ asset('img/player.png') }}" alt="player">
-        <img class="icon4" src="{{ asset('img/search.png') }}" alt="search">
+
     </div>
 
     <div class="content">
@@ -34,9 +34,6 @@
             </a>
         </div>
 
-        <div class="card-wrapper">
-            <div class="card"></div>
-        </div>
 
         <div class="history-label">Consultar Historial<br>de Torneos</div>
 
